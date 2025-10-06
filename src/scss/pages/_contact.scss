@@ -1,0 +1,109 @@
+@use "../abstracts/variables"as var;
+
+#contact {
+    #contact-bunner {
+        background-image: url("/project-template-ua/src/assets/img/contact-bg.jpg");
+        height: 554px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 130px;
+
+        h2 {
+            font-size: 50px;
+            font-weight: 900;
+            color: var.$white;
+        }
+
+        p {
+            width: 288px;
+            font-size: 17px;
+            font-weight: 400;
+            color: #E9E9ED;
+        }
+    }
+
+    #contacts-info {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 230px;
+            height: 180px;
+
+            h6 {
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+    }
+
+    #feedback {
+        width: 80%;
+        margin: 130px auto 120px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        img {
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h4 {
+                font-weight: 900;
+                font-size: 25px;
+            }
+
+            p {
+                margin: 30px 0;
+                font-weight: 400;
+                font-size: 17px;
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 20px;
+
+                .dot {
+                    color: #B92770;
+
+                }
+            }
+
+            input,
+            #message {
+                display: block;
+                border: 2px solid var.$pink;
+                margin-bottom: 30px;
+            }
+
+            input {
+                height: 44px;
+            }
+
+            #formBtn {
+                height: 40px;
+                width: 90px;
+
+            }
+        }
+    }
+}

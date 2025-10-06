@@ -1,0 +1,145 @@
+@use "../abstracts/variables"as var;
+
+#catalog-section {
+    width: 80%;
+    margin: 35px auto 120px auto;
+    #showuing-pages {
+        font-weight: 400;
+        font-size: 16px;
+        color: var.$grey;
+    }
+
+    #sort-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        #filters {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .filter {
+            position: relative;
+        }
+
+        .filter-btn {
+            padding: 8px 12px;
+            background-color: var.$white;
+            color: var.$grey;
+            cursor: pointer;
+         
+        }
+
+        .dropdown {
+            position: absolute;
+            display: none;
+            list-style: none;
+            background: var.$white;
+            color: var.$grey;
+            border: 1px solid var.$white;
+            margin: 0;
+            padding: 5px 0;
+            width: 150px;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+        }
+
+        .dropdown li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .dropdown li:hover {
+            background: #eee;
+        }
+
+        /* Show dropdown on hover */
+        .filter:hover .dropdown {
+            display: block;
+        }
+
+        .filter.active .filter-btn {
+            background-color: #0078d7;
+            color: white;
+        }
+
+        #reset-btn {
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 40px;
+            width: 88px;
+        }
+    }
+    #sorting{
+
+    }
+    #searching{
+        #searching-field {
+            border: 2px solid var.$grey;
+            height: 40px;
+            input{
+                border: none
+            }
+            svg{
+                height: 17px;
+                width:17px;
+            }
+        }
+
+    }
+   #product-list {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+       #list{
+       width: 910px;
+       }
+        #next-page{
+            width: 88px;
+            height: 40px;
+            background: var.$white;
+            color: var.$bl;
+            border: 2px solid var.$pink;
+            text-align: end;
+        
+        }
+        #best-sets{
+            width: 370px;
+      
+            h3{
+                font-size: 17px;
+                font-weight: 700;
+                margin-bottom: 23px;
+            }
+            .best-set-card{
+                display: flex;
+                gap: 10px;
+                margin-bottom: 5px;
+            img{
+                width: 90px;
+                height: 90px;
+            }
+            .best-set-description{
+                p{
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+                 .rating {
+                    margin: 7px 0;
+                    svg{
+                        height: 10px;
+                        width: 10px;
+                    }
+                    display: flex;
+                 }
+            }}
+
+        }
+}
+}

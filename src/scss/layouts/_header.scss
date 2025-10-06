@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as var;
+header{
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    
+    #name-content {
+        
+        display: flex;
+        justify-content: space-between;
+        #social-networks,
+        #user-block{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #header-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+
+        a{
+            margin: 30px;
+            text-decoration: none;
+            color: #000000;
+        }
+        #catalog {
+            margin-right: 3px;
+        } 
+    }
+}

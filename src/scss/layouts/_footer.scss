@@ -1,0 +1,93 @@
+@use '../abstracts/variables'as var;
+footer{
+    display: flex;
+    flex-direction: column;
+    #section-benefits{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 140px;
+        background-image: url("/project-template-ua/src/assets/img/our-benefits-bg.png");
+        color: #FFFFFF;
+        h4{
+            width: 100%;
+            text-align: start;
+            font-family: var.$third-font;
+            font-weight: 700;
+            font-size: 19px;
+        }
+        .benefits-block{
+            width: 25%;
+            text-align: center;
+            display: flex;
+            font-family: var.$secondary-font;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+     #section {
+         display: flex;
+         justify-content:space-between;
+         padding: 130px 130px 0 130px;
+         font-family: var.$primary-font;
+         font-size: 15px;
+         font-weight: 400;
+         color: var.$black;
+         
+         h5 {
+             font-weight: 700;
+            
+             padding: 0 0 18px 0;
+             margin: 0;
+         }
+         #footer-menu{
+            display: flex;
+            width: 500px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          
+            p{
+                margin: 10px 0 0 0;
+            }
+            #shipping{
+                margin-top: 50px;
+            }
+        }
+            #contact {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                  #contacts-info {
+                      display: flex;
+                      flex-wrap: wrap;
+                  }
+                .info {
+                    width: 50%;
+                    padding: 3% 0;
+                    display: flex;
+                    align-items: center;
+                    
+                    span{
+                        display: inline-block;
+                        padding: 0 5%;
+                    }
+                }
+                
+            }
+     }
+     #copyright {
+         text-align: center;
+         font-family: var.$third-font;
+         font-weight: 400;
+         font-size: 14px;
+         color: #00000059;
+         padding-top: 110px;
+     }
+}

@@ -11,6 +11,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass src/scss:dist/css --no-source-map",
+    "watch:sass": "sass --watch src/scss: dist/css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2",
+    "vite": "^7.1.9"
   }
 }

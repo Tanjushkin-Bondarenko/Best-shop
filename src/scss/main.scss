@@ -1,0 +1,367 @@
+@use "abstracts/variables"as var;
+@use 'layouts/header';
+@use 'layouts/footer';
+@use "../scss/components/buttons";
+@use "base/fonts";
+@use "base/reset";
+@use "pages/about";
+@use "pages/cart";
+@use "pages/catalog";
+@use "pages/contact";
+@use "pages/product-details";
+
+
+#home {
+    margin: 0;
+
+    #section {
+        display: flex;
+        align-items: center;
+        background-color: #E7E8E9;
+        padding: 0 10%;
+        height: 860px;
+
+        #smart-styles {
+            h2 {
+                font-size: 50px;
+                font-weight: 900;
+            }
+
+            p {
+                padding: 30px 0;
+                font-weight: 400;
+                font-size: 17px;
+                color: var.$grey;
+            }
+
+        }
+
+        img {
+            width: 44vw;
+            height: auto;
+        }
+    }
+
+    #discont-block {
+        display: flex;
+        background-color: var.$white;
+        margin: -10% auto 0 auto;
+        width: 80%;
+        box-shadow: var.$box-shadow;
+        height: 566px;
+
+        #article {
+            width: 42%;
+            margin: 90px 90px 70px 76px;
+
+            #author {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                img {
+                    width: 85px;
+                    height: 93px;
+                }
+
+                #author-info {
+                    width: 200px;
+                    margin-left: 5%;
+                }
+
+                h3 {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 17px;
+                    color: var.$grey;
+                    line-height: 130%;
+                }
+
+                #name {
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        #photo-block {
+            background-image: url(/project-template-ua/src/assets/img/hp2.png);
+            background-size: cover;
+            color: var.$white;
+            display: flex;
+            width: 60%;
+
+            #text {
+                width: 390px;
+                margin: 40% auto;
+
+            }
+
+            div {
+                font-size: 40px;
+                font-weight: 900;
+            }
+
+            p {
+                font-size: 17px;
+                font-weight: 400;
+            }
+
+            button {
+                width: 175px;
+                height: 60px;
+                font-size: 18px;
+            }
+
+        }
+    }
+
+    .block {
+        font-family: var.$primary-font;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        h3 {
+
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .discription {
+            margin: 10px 0 50px 0;
+            font-size: 17px;
+            font-weight: 400;
+            text-align: center;
+            color: var.$grey;
+        }
+    }
+
+    #travel-suitcases {
+        h3 {
+            margin: 100px 0 0 0;
+            color: var.$black;
+        }
+
+        #goods-block {
+            display: flex;
+            justify-content: space-between;
+            font-size: 19px;
+
+            @for $i from 1 to 5 {
+                .cases#{$i} {
+                    background-image: url("/project-template-ua/src/assets/img/hp-travel#{$i}.png");
+                    width: 24%;
+                    height: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    color: var.$white;
+                }
+            }
+
+            h6 {
+                width: 170px;
+                height: 51px;
+                font-weight: 700;
+                padding-bottom: 30px;
+            }
+
+            p {
+                width: 170px;
+                font-size: 17px;
+                font-weight: 400;
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    #selected,
+    #new {
+        margin: 110px auto 120px auto;
+
+        .track {
+
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-flow: row nowrap;
+
+        }
+
+        .track::-webkit-scrollbar {
+            background: transparent;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1 0 24%;
+            font-weight: 700;
+            font-size: 19px;
+            font-family: var.$primary-font;
+            aspect-ratio: 1;
+            scroll-snap-align: center;
+            margin: 0 12px;
+
+            height: 570px;
+            width: 24%;
+
+            img {
+                width: 100%;
+                height: 400px;
+                margin: 25px auto;
+            }
+
+            h6 {
+                width: 180px;
+                text-align: center;
+            }
+
+            .price {
+                color: var.$grey;
+                text-align: center;
+
+            }
+
+            button {
+                width: 150px;
+                height: 40px;
+                font-family: var.$fourth-font;
+            }
+        }
+
+        .carousel {
+            position: relative;
+            display: flex;
+            margin: 25px auto;
+
+        }
+
+        .arrowButton {
+            position: relative;
+            transform: translateY(-100%);
+            background-color: white;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            width: fit-content;
+            height: min-content;
+            opacity: 1;
+            transition: opacity .1s;
+
+            svg {
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 20px;
+                fill: #333;
+            }
+
+        }
+
+        .arrowButton:focus,
+        .arrowButton:hover {
+            opacity: 1;
+        }
+
+        .prev {
+            z-index: 2;
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    }
+
+    #offer-block {
+        width: 80%;
+        margin: 0 auto;
+        height: 400px;
+        display: flex;
+        background-image: url("/project-template-ua/src/assets/img/offer.jpg");
+        background-size: cover;
+        justify-content: space-around;
+        align-items: center;
+        font-family: var.$primary-font;
+        color: var.$white;
+
+        div {
+            width: 40%;
+        }
+
+        p {
+            display: block;
+        }
+
+        #offer {
+            font-size: 220px;
+            font-weight: 900;
+        }
+
+        #left-side {
+            display: flex;
+            flex-direction: column;
+            gap: 41px;
+            width: 35%;
+
+
+        }
+
+        #offer-month {
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        .descr {
+
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+        }
+    }
+    #castomers-reviw{
+    #customers{
+        display: flex;
+        margin: 60px auto 120px auto;
+            text-align: center;
+            gap: 20px;
+        .customer-block{
+            display: grid;
+            justify-items: center;
+            align-content: center;
+              gap: 24px;
+              height: 440px;
+              margin: 40px auto;
+            border: 1px solid var.$white;
+         box-shadow: 0px 20px 80px 0px #C1C7D4B3;
+         font-size: 17px;
+         img{
+            width: 98px;
+            height: 98px;
+         }
+         .review{
+            font-weight: 400;
+         }
+         .customer-name{
+            color: var.$pink;
+            font-weight: 700;
+         }
+        }
+        
+
+    }}
+}
