@@ -49,15 +49,14 @@
         }
 
         .dropdown li {
-            padding: 5px 10px;
-            cursor: pointer;
+           padding: 5px;
+           cursor: pointer;
         }
 
         .dropdown li:hover {
             background: #eee;
         }
 
-        /* Show dropdown on hover */
         .filter:hover .dropdown {
             display: block;
         }
@@ -76,23 +75,8 @@
             width: 88px;
         }
     }
-    #sorting{
-
-    }
-    #searching{
-        #searching-field {
-            border: 2px solid var.$grey;
-            height: 40px;
-            input{
-                border: none
-            }
-            svg{
-                height: 17px;
-                width:17px;
-            }
-        }
-
-    }
+   
+    
    #product-list {
         width: 80%;
         margin: 0 auto;

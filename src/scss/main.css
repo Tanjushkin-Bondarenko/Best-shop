@@ -49,7 +49,7 @@ footer #section-benefits {
 footer #section-benefits h4 {
   width: 100%;
   text-align: start;
-  font-family: Inter;
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 700;
   font-size: 19px;
 }
@@ -258,6 +258,11 @@ body {
   font-size: 17px;
 }
 
+#cart {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #catalog-section {
   width: 80%;
   margin: 35px auto 120px auto;
@@ -271,7 +276,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* Show dropdown on hover */
 }
 #catalog-section #sort-block #filters {
   display: flex;
@@ -303,7 +307,7 @@ body {
   z-index: 10;
 }
 #catalog-section #sort-block .dropdown li {
-  padding: 5px 10px;
+  padding: 5px;
   cursor: pointer;
 }
 #catalog-section #sort-block .dropdown li:hover {
@@ -323,17 +327,6 @@ body {
   cursor: pointer;
   height: 40px;
   width: 88px;
-}
-#catalog-section #searching #searching-field {
-  border: 2px solid #504E4A;
-  height: 40px;
-}
-#catalog-section #searching #searching-field input {
-  border: none;
-}
-#catalog-section #searching #searching-field svg {
-  height: 17px;
-  width: 17px;
 }
 #catalog-section #product-list {
   width: 80%;
@@ -382,13 +375,13 @@ body {
 }
 
 #contact #contact-bunner {
+  margin-bottom: 130px;
   background-image: url("/project-template-ua/src/assets/img/contact-bg.jpg");
   height: 554px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 130px;
 }
 #contact #contact-bunner h2 {
   font-size: 50px;
@@ -467,6 +460,11 @@ body {
 #contact #feedback form #formBtn {
   height: 40px;
   width: 90px;
+}
+
+#product-details {
+  width: 80%;
+  margin: 0 auto;
 }
 
 #home {
