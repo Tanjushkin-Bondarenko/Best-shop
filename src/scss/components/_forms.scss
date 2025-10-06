@@ -1,3 +1,8 @@
 form{
-    
+     input,
+     #message {
+         display: block;
+         border: 2px solid var.$pink;
+         margin-bottom: 30px;
+     }
 }

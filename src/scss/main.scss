@@ -154,6 +154,7 @@
 
             @for $i from 1 to 5 {
                 .cases#{$i} {
+                   
                     background-image: url("/project-template-ua/src/assets/img/hp-travel#{$i}.png");
                     width: 24%;
                     height: 600px;
