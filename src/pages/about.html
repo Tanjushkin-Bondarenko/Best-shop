@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
 <body>
- 
-    <div id="header"></div>
     <div id="about">
-        <div id="info">
+        <section id="info">
             <h2>About Us</h2>
             <div>Duis vestibulum elit vel neque pharetra vulputate.</div>
             <div>Duis rutrum non risus in imperdiet.</div>
-        </div>
-        <div id="about-blocks">
+        </section>
+
+        <section id="about-blocks">
            <div class="about-block">
             <svg width="62" height="62">
-                <use href="/project-template-ua/src/assets/sprite.svg#superior"></use>
+                <use href="/src/assets/sprite.svg#superior"></use>
             </svg>
             <h6>Superior Accuracy</h6>
             <p>Qewist vestibulum elit vel neque pharetra vulputate scelerisque nisi urna.</p>
@@ -25,7 +17,7 @@
 
             <div class="about-block">
             <svg width="62" height="62">
-                <use href="/project-template-ua/src/assets/sprite.svg#awards"></use>
+                <use href="/src/assets/sprite.svg#awards"></use>
             </svg>
             <h6>Awards</h6>
             <p>Vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna.</p>
@@ -33,7 +25,7 @@
 
             <div class="about-block">
             <svg width="62" height="62">
-                <use href="/project-template-ua/src/assets/sprite.svg#ecological"></use>
+                <use href="/src/assets/sprite.svg#ecological"></use>
             </svg>
             <h6>Ecological</h6>
             <p>Elit vel neque duis vestibulum pharetra vulputateuisque scelerisque nisi urna.</p>
@@ -41,47 +33,52 @@
 
             <div class="about-block">
             <svg width="62" height="62">
-                <use href="/project-template-ua/src/assets/sprite.svg#shipping"></use>
+                <use href="/src/assets/sprite.svg#shipping"></use>
             </svg>
             <h6>Shipping Worldwide</h6>
             <p>Quisque scelerisque nisi urna. Duis vestibulum elit vel nequepharetra vulputate.</p>
            </div>
-        </div>
-        <div id="article">
-            <div>
+        </section>
+
+        <section id="article">
             <h3>New Arrivals Every Week</h3>
-            <p>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi 
-urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit. 
+            <article>Duis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin molestie accumsan nulla sit. 
 Quisque scelerisque nisi urnauis rutrum. 
-Vitrumuis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis vestibulum elit vel neque pharetra vulputateuisque scelerisque nisi urna.</p>
-<button>See All Models</button>
-</div>
-<img src="/project-template-ua/src/assets/img/article-about.png" alt="suitcase"></div>
-     
-        <div id="team">
+            <br/>
+            <br/>
+Vitrumuis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis vestibulum elit vel neque pharetra vulputateuisque scelerisque nisi urna.
+Vitrumuis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis vestibulum elit vel neque pharetra vulputateuisque scelerisque nisi urna.
+Vitrumuis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi urna. Duis vestibulum elit vel neque pharetra vulputateuisque scelerisque nisi urna.
+            </article>
+            <button id="see-all">See All Models</button>
+            <img src="/src/assets/img/article-about.png" alt="suitcase" loading="lazy">
+     </section>
+
+        <section id="team">
             <h3>Our Incredible Team</h3>
             <svg >
-                <use href="/project-template-ua/src/assets/sprite.svg#line">
+                <use href="/src/assets/sprite.svg#line">
             </svg>
             <div id="our-team">
-                <div class="team">
-                    <img src="/project-template-ua/src/assets/img/team1.jpg" alt="Nataliia Foster" >
+            <div class="team">
+                    <img src="/src/assets/img/team1.jpg" alt="Nataliia Foster" loading="lazy">
                     <div class="name">Nataliia Foster</div>
                     <div>Product Manager</div>
-           </div>
-                <div class="team">
-                    <img src="/project-template-ua/src/assets/img/team2.jpg" alt="ALEXANDRA THOMPSON">
+            </div>
+            <div class="team">
+                    <img src="/src/assets/img/team2.jpg" alt="ALEXANDRA THOMPSON" loading="lazy">
                     <div class="name">ALEXANDRA THOMPSON</div>
                     <div>Graphic Designer</div>
-                </div>
-                <div class="team">
-                    <img src="/project-template-ua/src/assets/img/team3.jpg" alt="IRYNA BROOKS">
+            </div>
+            <div class="team">
+                    <img src="/src/assets/img/team3.jpg" alt="IRYNA BROOKS" loading="lazy">
                     <div class="name">IRYNA BROOKS</div>
                     <div>Head Of Marketing</div>
-                </div>
             </div>
-        </div>
-         <div id="offer-block" style="margin: 0 auto 120px auto;">
+        </section>
+
+       
+         <section id="offer-block">
           <div>
             <p id="offer">50%</p>
             <p class="descr">Curabitur vulputate arcu odio, ac facilisis diam.</p>
@@ -92,12 +89,9 @@ Vitrumuis vestibulum elit vel neque pharetra vulputate. Quisque scelerisque nisi
               Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
               imperdiet et leo in vulputate.
             </p>
-            <button>Get Offer Today</button>
+            <button id="get-offer">Get Offer Today</button>
           </div>
-        </div>
+        </section>
 
     </div>
-    <div id="footer"></div>
-
 </body>
-</html>

@@ -4,28 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Shop</title>
-    <link rel="stylesheet" href="/project-template-ua/src/scss/main.css" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
   </head>
   <body>
-    <div id="header"></div>
-    <div id="main"> 
-    <div id="home">
-      <div id="section">
+    <header id="header"></header>
+    <main id="main-content" style="display: none;"></main>
+       <main id="home">
+      <section id="section">
         <div id="smart-styles">
           <h2>Smart Styles for<br />Every Destination</h2>
           <p>
             Phasellus risus turpis, pretium sit amet magna non, molestie
             ultricies enim. Nullam pulvinar felis at metus.
           </p>
-          <button>View All Items</button>
+          <button id="view-all">View All Items</button>
         </div>
-        <img src="/project-template-ua/src/assets/img/hp.png" alt="suitcase" />
-      </div>
-      <div id="discont-block">
+        <img src="/src/assets/img/hp.png" loading="lazy" alt="suitcase" />
+      </section>
+      <section id="discont-block">
         <div id="article">
           <div id="author">
             <img
-              src="/project-template-ua/src/assets/img/author.jpg"
+              src="/src/assets/img/author.jpg"
               alt="author"
             />
             <div id="author-info">
@@ -36,13 +36,13 @@
               Aliquam Faucibus <br />
               Odionecom.
             </h3>
-            <p>
+            <article>
               Duis vestibulum elit vel neque pharetra vulputate. Quisque
               scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin
               molestie accumsan nulla sit. <br /><br />
               Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque
               scelerisque nisi urna.
-            </p>
+            </article>
           </div>
         </div>
         <div id="photo-block">
@@ -55,8 +55,8 @@
             <button class="button">Get discount</button>
           </div>
         </div>
-      </div>
-      <div id="travel-suitcases" class="block">
+      </section>
+      <section id="travel-suitcases" class="block">
         <h3>Travel suitcase</h3>
         <p class="discription">Duis vestibulum elit vel neque pharetra</p>
         <div id="goods-block">
@@ -89,15 +89,15 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="block" id="selected" >
+      </section>
+      <section class="block" id="selected" >
         <h3>Selected Products</h3>
         <div class="discription">Duis vestibulum elit vel neque pharetra</div>
         <div class="carousel" id="selected-crousel">
           <button class="arrowButton prev" id="prev">
             <svg>
               <use
-                href="/project-template-ua/src/assets/sprite.svg#arrLeft"
+                href="/src/assets/sprite.svg#arrLeft"
               ></use>
             </svg>
           </button>
@@ -105,13 +105,13 @@
           <button class="arrowButton next" id="next">
             <svg>
               <use
-                href="/project-template-ua/src/assets/sprite.svg#arrRight"
+                href="/src/assets/sprite.svg#arrRight"
               ></use>
             </svg>
           </button>
         </div>
-      </div>
-       <div id="offer-block">
+      </section>
+       <section id="offer-block">
           <div>
             <p id="offer">50%</p>
             <p class="descr">Curabitur vulputate arcu odio, ac facilisis diam.</p>
@@ -124,16 +124,16 @@
             </p>
             <button>Get Offer Today</button>
           </div>
-        </div>
+        </section>
 
-      <div id="new" class="block">
+      <section id="new" class="block">
         <h3>New Products Arrival</h3>
         <div class="discription">Duis vestibulum elit vel neque pharetra</div>
          <div class="carousel" id="new-crousel">
         <button class="arrowButton prev" id="new-prev">
           <svg>
             <use
-              href="/project-template-ua/src/assets/sprite.svg#arrLeft"
+              href="/src/assets/sprite.svg#arrLeft"
             ></use>
           </svg>
         </button>
@@ -141,32 +141,31 @@
         <button class="arrowButton next" id="new-next">
           <svg>
             <use
-              href="/project-template-ua/src/assets/sprite.svg#arrRight"
+              href="/src/assets/sprite.svg#arrRight"
             ></use>
           </svg>
         </button>
         </div>
-      </div>
-      <div class="block" id="castomers-reviw">
+      </section>
+      <section class="block" id="castomers-reviw">
         <h3>Our Grateful Customers</h3>
         <div class="description">Duis vestibulum elit vel neque pharetra</div>
         <div id="customers">
         <div class="customer-block">
-          <img src="/project-template-ua/src/assets/img/customer1.jpg" alt="Customer">
-          <p class="review">Curabitur vulputate arcu odio, ac 
-facilisis diam accumsan ut. Ut mperdiet 
-et leo in vulputate. </p>
+          <img src="/src/assets/img/customer1.jpg" loading="lazy" alt="Customer">
+          <p class="review">Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut mperdiet et leo in vulputate. </p>
           <p class="customer-name">Ethan Wade, New York</p>
         </div>
         <div class="customer-block">
-          <img src="/project-template-ua/src/assets/img/customer2.jpg" alt="Customer">
+          <img src="/src/assets/img/customer2.jpg" loading="lazy" alt="Customer">
           <p class="review">Curabitur vulputate arcu odio, ac 
 facilisis diam accumsan ut. Ut mperdiet 
 et leo in vulputate. </p>
           <p class="customer-name">Jane Reyes, California</p>
         </div>
         <div class="customer-block">
-          <img src="/project-template-ua/src/assets/img/customer3.jpg" alt="Customer">
+          <img src="/src/assets/img/customer3.jpg" loading="lazy" alt="Customer">
+          <p class="review">Curabitur vulputate arcu odio, ac 
           <p class="review">Curabitur vulputate arcu odio, ac 
 facilisis diam accumsan ut. Ut mperdiet 
 et leo in vulputate. </p>
@@ -174,10 +173,8 @@ et leo in vulputate. </p>
         </div>
         </div>
       </div>
-    </div>
-    </div>
-    <div id="footer"></div>
-
-    <script src="js/main.js"></script>
+</main>
+    <footer id="footer"></footer>
+    <script type="module" src="./js/main.js" defer></script>
   </body>
 </html>

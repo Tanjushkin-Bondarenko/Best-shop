@@ -1,129 +1,174 @@
 @use "../abstracts/variables"as var;
+@use "../abstracts/extends";
 
 #catalog-section {
     width: 80%;
     margin: 35px auto 120px auto;
-    #showuing-pages {
-        font-weight: 400;
-        font-size: 16px;
+#showuing-pages {
+    font-weight: 400;
+    font-size: 16px;
+    color: var.$grey;
+}
+#sort-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: 400;
+
+    .filter-button{
+        background-color: var.$white;
+        border: 1px solid var.$grey;
+        height: 40px;
+        width: 200px;
         color: var.$grey;
-    }
-
-    #sort-block {
+        }
+    #filters {
         display: flex;
+        flex-direction: column;
+        gap: 15px;
         align-items: center;
-        justify-content: space-around;
+        margin: 10px auto;
+    #filters-parametr{
+        display: flex;
+        border: 2px solid var.$pink;
+        border-left: none;
+        border-right: none;
+    .filter-cart{
+        width: 250px;
+        margin: 0 20px;
+    .filters-input{
+        width: 250px;
+        margin: 20px 0;          
+    }}}
+    #clear-hide{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        justify-content: flex-start;
+    button{
+        width: 220px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
+         }
+     }
+}
 
-        #filters {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-            margin: 20px;
+    .filter {
+    position: relative;
+    display: block;
+    padding: 4px 12px;
+    background-color: var.$white;
+    color: var.$grey;
+    cursor: pointer;
+          
+    .dropdown{
+        position: absolute;
+        display: none;
+        list-style: none;
+        background: var.$white;
+        color: var.$grey;
+        border: 1px solid var.$white;
+        margin: 0;
+        padding: 5px 0;
+        width: 150px;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    li{
+        padding: 5px;
+    cursor: pointer;
+     }
+    li:hover{
+        background: #eee;
         }
-
-        .filter {
-            position: relative;
-        }
-
-        .filter-btn {
-            padding: 8px 12px;
-            background-color: var.$white;
-            color: var.$grey;
-            cursor: pointer;
-         
-        }
-
-        .dropdown {
-            position: absolute;
-            display: none;
-            list-style: none;
-            background: var.$white;
-            color: var.$grey;
-            border: 1px solid var.$white;
-            margin: 0;
-            padding: 5px 0;
-            width: 150px;
-            top: 100%;
-            left: 0;
-            z-index: 10;
-        }
-
-        .dropdown li {
-           padding: 5px;
-           cursor: pointer;
-        }
-
-        .dropdown li:hover {
-            background: #eee;
-        }
-
-        .filter:hover .dropdown {
-            display: block;
-        }
-
-        .filter.active .filter-btn {
-            background-color: #0078d7;
-            color: white;
-        }
-
-        #reset-btn {
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            height: 40px;
-            width: 88px;
         }
     }
-   
-    
-   #product-list {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-       #list{
-       width: 910px;
-       }
-        #next-page{
-            width: 88px;
-            height: 40px;
-            background: var.$white;
-            color: var.$black;
-            border: 2px solid var.$pink;
-            text-align: end;
-        
-        }
-        #best-sets{
-            width: 370px;
-      
-            h3{
-                font-size: 17px;
-                font-weight: 700;
-                margin-bottom: 23px;
-            }
-            .card{
-                display: flex;
-                gap: 10px;
-                margin-bottom: 5px;
-            img{
-                width: 90px;
-                height: 90px;
-            }
-         
-                p{
-                    font-size: 13px;
-                    font-weight: 400;
+    .filter:hover {
+    .dropdown{
+         display: block;
+        }}
+    .active{
+        color: var.$white;
+        background-color: var.$pink;
+    }
+#searching{
+        height: 40px;
+#searching-field{
+#search{
+        display: block;
+        height: 40px;
+        width: 300px;
+}
+#search-mark{
+        position: relative;
+        top: -27px;
+        right: -270px;         
                 }
-                 .rating {
-                    margin: 7px 0;
-                    svg{
-                        height: 10px;
-                        width: 10px;
-                    }
-                    display: flex;
+            }
+        }
+    }
+      
+#product-list {
+    margin: 0 auto;
+    display: flex;
+#list-section{
+    display: flex;
+    flex-direction: column;
+#list{
+    width: 910px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+    margin-bottom: 50px; 
+       }
+
+    #page-info{
+       text-align: center;
+    span{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+       }
+       .activePage{
+        color: var.$white;
+        background-color: var.$pink;
+       }
+       }
+     }
+#best-sets{
+    width: 370px;
+    h3{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 23px;
+    }
+    .card{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    img{
+    width: 90px;
+    height: 90px;
+            }
+    p{
+    font-size: 13px;
+    font-weight: 400;
+                }
+    .rating-goods {
+    margin: 7px 0;
+    svg{
+    height: 10px;
+    width: 10px;           
+ }
+    display: flex;
                  }
             }
-
         }
 }
 }

@@ -7,7 +7,7 @@ header{
     height: 140px;
     
     #name-content {
-        
+        padding-top: 10px;
         display: flex;
         justify-content: space-between;
         #social-networks,
@@ -15,8 +15,36 @@ header{
             display: flex;
             align-items: center;
         }
+        a{
+            width: max-content;
+           text-decoration: none;
+           height: 28px;
+            &:hover{
+                cursor: pointer;
+            }
+           
+                svg{
+                    display: inline-block;
+                }
+            
+            #quantity-in-card{
+                text-align: center;
+                border: 1px solid var.$pink;
+                border-radius: 50%;
+                color: var.$pink;
+                font-size: 12px;
+                width:max-content;
+                padding: 0 3px ;
+                font-weight: 600;
+                position: relative;
+                bottom: 30px;
+                left: 45px;
+            }
+        }
     }
-
+    #logo:hover{
+        cursor: pointer;
+    }
     #header-menu {
         display: flex;
         flex-direction: row;
@@ -24,11 +52,14 @@ header{
         align-items: center;
         font-weight: 700;
         font-size: 18px;
-
-        a{
-            margin: 30px;
+        margin: 30px auto;
+        gap: 30px;
+        a{ 
             text-decoration: none;
-            color: #000000;
+            color: var.$black;
+        }
+        .active-menu{
+            color: var.$pink;
         }
         #catalog {
             margin-right: 3px;

@@ -1,0 +1,17 @@
+@use "variables" as var;
+
+.primiry{
+font-family: var.$primary-font;
+color: var.$black;
+font-weight: 900
+}
+.sale{
+    position: relative;
+    bottom: 95%;
+    left: 10%;
+    z-index: 1;
+    width: 54px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 12px;
+}

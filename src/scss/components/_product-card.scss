@@ -1,4 +1,47 @@
-#product-cart{
-    width: 80%;
-    margin: 0 auto;
+@use "buttons";
+@use "../abstracts/extends";
+@use "../abstracts/variables" as var;
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 24%;
+    font-weight: 700;
+    font-size: 19px;
+    justify-content: space-between;       
+.photo-sale-block{
+    height: 400px;
+    width: 280px;
+img{
+    height: 100%;
+    width: 100%;
 }
+    .sale-button{
+    @extend .sale;
+        }
+         
+        }
+        .price {
+                color: var.$grey;
+                text-align: center;
+            }
+          #addToCard{
+           color: var.$white;
+           & :hover{
+                cursor: pointer;
+            }
+       }
+        h6 {
+                width: 180px;
+                text-align: center;
+            }
+    }  
+       
+    #button-block{
+        display: flex;
+        justify-content: space-between;   
+       }
+     
+
+    

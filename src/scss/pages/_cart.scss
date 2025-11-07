@@ -1,4 +1,152 @@
+@use "../abstracts/variables"as var;
+@use "../abstracts/extends";
+
 #cart{
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+    width: 100%;
+    #card-bg{
+        background: no-repeat center/100% url("/src/assets/img/cart-bg.png");
+        margin: 10px 0;
+        height: 200px;
+        h3{
+            color: var.$white;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            padding-top: 50px;
+        }
+    }
+    #cart{
+        width: 80%;
+        margin: 70px auto;
+        #menu{
+            display: flex;
+            
+            background-color: var.$grey;
+            color: var.$white;
+            height: 60px;
+            text-transform: uppercase;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-family: var.$fourth-font;
+            font-weight: 700;
+           
+            .menu{
+                padding: 0 10px;
+            }
+            #prod-image{
+               width: 120px;
+            }
+            #prod-name{
+             width: 160px;
+            }
+            #prod-price{
+                
+            }
+            #prod-quatity{
+                
+            }
+            #prod-total{
+               
+            }
+            #prod-delete{
+              
+            }
+        }
+        #product-in-cart{
+            .prouct-container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 2px solid var.$pink;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                padding: 10px;
+                font-family: var.$fourth-font;
+                font-weight: 700;
+                font-size: 18px;
+                .product-name{
+                width: 150px;
+                
+                span{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                }
+                img{
+                    width: 100px;
+                    height: 120px;
+                }
+                .quantity-block{
+                    font-size: 20px;
+                    button{
+                        width: 35px;
+                        height: 35px;
+                        background-color: var.$white;
+                        color: var.$black;
+                        font-size: 25px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .delete-btn{
+                    background-color: var.$white;
+                    width: 25px;
+                    height: 25px;
+                    svg{
+                        fill: none;
+                     &:hover{
+                        cursor: pointer;
+                     }
+                    }
+                }
+                
+            }
+        }
+        
+    }
+  #cart-buttons{
+    display: grid;
+            width: 80%;
+            margin: 15px auto 120px auto;
+            justify-content: space-between;
+            button{
+                grid-row: 1/2;
+                width: 220px;
+                height: 60px;   
+                text-transform: uppercase; 
+            }
+             #total-sum-block{
+                grid-row: 1/3;
+                grid-column: 7/8;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                color: var.$white;
+                font-size: 17px;
+                font-weight: 700;
+                width: 570px;
+                height: 360px;
+                padding: 40px;
+                background-color: var.$grey;
+                .total-sum-info{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                div{
+                    border: 1px solid var.$pink;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+                #total{
+                    font-size: 20px;
+                }
+                
+            }
+        }
 }
