@@ -1,36 +1,44 @@
 <body>
-    <div id="name-content">
-      <div id="social-networks">
-   <svg width="20" height="20">
-      <use href="/src/assets/sprite.svg#facebook"></use>
-    </svg>
-
-    <svg width="20" height="20">
-      <use href="/src/assets/sprite.svg#twitter"></use>
-    </svg>
-
-    <svg width="20" height="20">
-      <use href="/src/assets/sprite.svg#instagram"></use>
-    </svg>
-      </div>
-
-      <div id="logo">
+  <div id="header-content">
+  <section id="name-content">
+    <section id="social-networks">
+        <a href="https://www.facebook.com/?locale=uk_UA">
+           <svg width="20" height="20">
+             <use href="/src/assets/sprite.svg#facebook"></use>
+           </svg>
+     </a>
+    <a href="https://x.com/?lang=uk">
+         <svg width="20" height="20">
+           <use href="/src/assets/sprite.svg#twitter"></use>
+         </svg>
+  </a>
+  <a href="https://www.instagram.com/">
+         <svg width="20" height="20">
+            <use href="/src/assets/sprite.svg#instagram"></use>
+           </svg>
+    </a>
+      </section>
+ 
+      <section id="logo">
         <img src="/src/assets/img/logo.png" alt="logo">
-        </div>
-        <div id="user-block">
+        </section>
+
+        <section id="user-block">
         <a id="login">
-        <svg width="30" height="33">
-      <use href="/src/assets/sprite.svg#user"></use>
-    </svg>
-  </a>
-     <a id="open-cart" >
-      <span id="quantity-in-card" style="display: none;"></span>
-    <svg width="30" height="33">
-      <use href="/src/assets/sprite.svg#shopping-card"></use>
-    </svg>
-  </a>
-    </div>
-    </div>
+          <svg width="30" height="33">
+            <use href="/src/assets/sprite.svg#user"></use>
+          </svg>
+         </a>
+
+        <a id="open-cart" >
+            <span id="quantity-in-card" style="display: none;"></span>
+          <svg width="30" height="33">
+            <use href="/src/assets/sprite.svg#shopping-card"></use>
+          </svg>
+         </a>
+    </section>
+   </section>
+  
     
     <div id="line">
       <svg width="1301" height="2">
@@ -46,4 +54,36 @@
         <a href="#about" data-page="about" id="about">About Us</a>
         <a href="#contact" data-page="contact" id="contact">Contact Us</a>
     </nav>
+ </section>
+ </div>
+
+    <div id="popup" style="display: none">
+    <div class="popup-content">
+      <form>
+        
+    <div id="wrapper-for-email">
+        <label for="email">Email address<span class="required-snow">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+    </div>
+
+    <div id="wrapper-for-password">
+        <label for="password">Password<span class="required-snow">*</span></label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        <svg id="togle-password" widht="18" height="15">
+            <use href="/src/assets/sprite.svg#see"></use>
+         </svg>
+    </div>
+    <div id="wrapper-for-checkbox">
+        <input type="checkbox" for="remember" name="remember" id="remember" required>
+        <label for="remember" id="label-remember">Remember me</label>
+    </div>   
+        
+        <a href="#" class="forgot-password">forgot your password?</a>
+
+        <button type="submit" id="login-button">log in</button>
+      </form>
+    </div>
+    </div>
+
+ 
 </body>

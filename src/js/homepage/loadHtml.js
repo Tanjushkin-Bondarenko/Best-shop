@@ -1,6 +1,7 @@
 import { createCourosel } from "./createCarousel.js";
 import showProducts from '../catalog/showProducts.js'
 import { showQuantityInCart } from "../cart/showQuantityInCart.js";
+import { checkValidityEmail } from "../contact/checkValidity.js";
 
 
 const mainContent = document.querySelector("#main-content");
@@ -19,12 +20,13 @@ export function loadHTML(element, file){
             showQuantityInCart()
             if(element == "#header"){
             document.querySelector("#logo").addEventListener("click", ()=>logohendler(mainContent, homePage))
+            document.querySelector("#login").addEventListener("click", showLoginWindow)
         }
         if(element=="#footer"){
-        document.querySelector("#about-us-from-footer").addEventListener("click", ()=>{
+             document.querySelector("#about-us-from-footer").addEventListener("click", ()=>{
              loadPage("about")
             showActivePage("about")})
-        document.querySelector("#contact-from-footer").addEventListener("click", ()=>{
+            document.querySelector("#contact-from-footer").addEventListener("click", ()=>{
              loadPage("contact")
             showActivePage("contact")})
         }
@@ -49,9 +51,8 @@ export async function loadPage(page) {
           document.querySelector("#see-all").addEventListener("click", ()=>{
             loadPage("catalog")
             showActivePage("catalog")
-            
-          })
-        }
+          }) }
+          if(page=="contact"){checkValidityEmail()}
 }
 
   function setNavigation() {
@@ -112,4 +113,16 @@ function logohendler(elment1,element2 ){
 export function showActivePage(val){
 document.querySelectorAll("#header-menu a").forEach(item=>item.classList.remove("active-menu"));
 document.querySelector(`#${val}`).classList.add("active-menu")
+}
+
+function showLoginWindow(){
+ const popup = document.querySelector("#popup");
+ popup.style.display == "none" ? popup.style.display = "block" : popup.style.display = "none";
+ document.querySelector("#togle-password").addEventListener("click", toglePassword)
+}
+
+function toglePassword(){
+  const passwordInput = document.querySelector("#password");
+  const isVisible = passwordInput.type === "text";
+  passwordInput.type = isVisible ? "password" : "text"
 }

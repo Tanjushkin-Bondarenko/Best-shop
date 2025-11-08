@@ -3,6 +3,8 @@
 *{
 margin: 0;
    box-sizing: border-box;
+   overflow-x: hidden;
+    max-width: 100%;
  
 }
 img,
@@ -17,4 +19,6 @@ html,
 body {
     height: 100%;
     font-family: var.$primary-font;
+     overflow-x: hidden;
+    max-width: 100%;
 }

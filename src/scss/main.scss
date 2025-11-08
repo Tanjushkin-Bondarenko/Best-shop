@@ -15,7 +15,7 @@
 
 #home {
     margin: 0;
-
+    overflow-x: hidden;
     #section {
         display: flex;
         align-items: center;
@@ -123,13 +123,10 @@
     }
 
     .block {
-        font-family: var.$primary-font;
         width: 80%;
         margin: 0 auto;
         text-align: center;
-
         h3 {
-
             font-size: 40px;
             font-weight: 900;
             text-align: center;
@@ -145,19 +142,23 @@
     }
 
     #travel-suitcases {
-        h3 {
+        overflow-x: hidden;
+        h3{
             margin: 100px 0 0 0;
+            text-align: center;
             color: var.$black;
         }
-
         #goods-block {
             display: flex;
             justify-content: space-between;
             font-size: 19px;
-
-            @for $i from 1 to 5 {
+            height: 620px;
+            gap: 10px;
+            will-change: transform;
+            transform: translateZ(0);
+             transition: transform 0.3s ease-in-out;
+            @for $i from 1 to 5{
                 .cases#{$i} {
-                   
                     background-image: url("/src/assets/img/hp-travel#{$i}.png");
                     width: 24%;
                     height: 600px;
@@ -166,12 +167,15 @@
                     justify-content: flex-end;
                     align-items: center;
                     color: var.$white;
-                }
+                   object-fit: cover;
+                   transition: transform 0.3s ease, box-shadow 0.4s ease;
+                   &:hover{
+                    transform: scale(1.05);
+                     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                   
             }
-
-            h6 {
+                   h6 {
                 width: 170px;
-                height: 51px;
                 font-weight: 700;
                 padding-bottom: 30px;
             }
@@ -182,7 +186,9 @@
                 font-weight: 400;
                 padding-bottom: 60px;
             }
-        }
+                }
+    }
+}
     }
 
     #selected,
@@ -208,6 +214,7 @@
             scroll-snap-align: center;
             margin: 0 12px; 
             width: 24%;
+            height: 600px;
         .sale-button{
                 @extend .sale;
                 left:-30%;

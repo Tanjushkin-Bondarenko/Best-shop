@@ -1,5 +1,5 @@
 @use '../abstracts/variables' as var;
-header{
+#header-content{
     width: 88%;
     margin: 0 auto;
     display: flex;
@@ -12,21 +12,25 @@ header{
         justify-content: space-between;
         #social-networks,
         #user-block{
+            height: 50px;
             display: flex;
             align-items: center;
-        }
-        a{
+        
+        #login{
             width: max-content;
            text-decoration: none;
            height: 28px;
             &:hover{
                 cursor: pointer;
             }
-           
                 svg{
                     display: inline-block;
-                }
-            
+                }}
+           
+            }
+            #open-cart:hover{
+                cursor: pointer;
+            }
             #quantity-in-card{
                 text-align: center;
                 border: 1px solid var.$pink;
@@ -37,11 +41,10 @@ header{
                 padding: 0 3px ;
                 font-weight: 600;
                 position: relative;
-                bottom: 30px;
-                left: 45px;
+                left: 20px;
             }
+        
         }
-    }
     #logo:hover{
         cursor: pointer;
     }
@@ -66,3 +69,74 @@ header{
         } 
     }
 }
+
+ #popup{
+                width: 380px;
+                height: auto;
+                position: absolute;
+                top: 10%;
+                left: 70%;
+                background-color: var.$white;
+               .popup-content{
+                  width: 340px;
+                  margin: 50px auto;
+                
+                form{
+                    display: grid;
+                input{
+                      width: 100%;
+                    border: 1px solid var.$pink;
+                }
+                .required-snow{
+                    color: var.$pink;
+                    
+                }
+                #wrapper-for-email{
+                 grid-column: 1/3;
+                 grid-row: 1/2;
+                }
+                #wrapper-for-password{
+                    grid-column: 1/3;
+                    grid-row: 2/3;
+                    #togle-password{
+                    position: relative;
+                    left: 10.5rem;
+                    top: -57%;
+                    right: -50%;
+                    cursor: pointer;
+                    color: var.$light-grey;
+
+                    }
+                }
+                #wrapper-for-checkbox{
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                    input{
+                        width: 20px;
+                        margin: 0;
+                        display: inline-block;
+                    }
+                    label{
+                        color: var.$light-grey;
+                        font-size: 11px;
+                        font-weight: 400;
+                    }
+                }
+                .forgot-password{
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                    color: var.$pink;
+                    font-size: 11px;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                #login-button{
+                    grid-column: 1/3;
+                    grid-row: 4/5;
+                    text-transform: uppercase;
+                    width: 100%;
+                    height: 40px;
+                }
+            
+               }
+               }}

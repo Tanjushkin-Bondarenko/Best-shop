@@ -42,20 +42,16 @@
             #prod-name{
              width: 160px;
             }
-            #prod-price{
-                
-            }
-            #prod-quatity{
-                
-            }
-            #prod-total{
-               
-            }
-            #prod-delete{
-              
-            }
         }
         #product-in-cart{
+            .empty-cart{
+                text-align: center;
+                font-size: 20px;
+                font-weight: 700;
+                color: var.$grey;
+                padding-top: 20px;
+
+            }
             .prouct-container{
                 display: flex;
                 justify-content: space-between;

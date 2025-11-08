@@ -12,9 +12,9 @@ export function showQuantityInCart(){
     quantityProductsInCart.textContent = sum;
     document.querySelector("#open-cart").addEventListener("click", ()=>openCart())
 } 
-if(sum==0){
-    quantityProductsInCart.addEventListener("focus", ()=>{
+// if(sum==0){
+//     quantityProductsInCart.addEventListener("focus", ()=>{
         
-    })
-}  
+//     })
+// }  
 }

@@ -13,8 +13,9 @@
 .photo-sale-block{
     height: 400px;
     width: 280px;
+    overflow: hidden;
 img{
-    height: 100%;
+    height: 400px;
     width: 100%;
 }
     .sale-button{

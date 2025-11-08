@@ -1,6 +1,7 @@
 import { createPath } from "../homepage/loadHtml.js";
 import { buildProductInCart } from "./buildProductInCart.js";
 import { loadPage } from "../homepage/loadHtml.js";
+import { clearCart } from "./productCartHendlers.js";
 
  export async function openCart(){
 
@@ -22,12 +23,12 @@ import { loadPage } from "../homepage/loadHtml.js";
    
   document.querySelector("#clear-cart").addEventListener("click", ()=>{
       clearCart(container);
-      document.querySelector("#empty-cart-isnfo").style.display = "flex"
+      document.querySelector("#empty-cart-isnfo").style.display = "block"
  })
 
  document.querySelector("#checkout").addEventListener("click", ()=>{
       clearCart(container)
-      document.querySelector("#thanks").style.display="flex"
+      document.querySelector("#thanks").style.display="block"
 })
 }
 
@@ -36,6 +37,7 @@ export function showSumToPay(val, node){
 const total = document.querySelector("#total-sum");
 const sumDiscont = document.querySelector("#discont-sum"); 
 const discont = document.querySelector("#discont");
+
 
  node.textContent = `$${val}`;
       let totalSum = 0
@@ -49,15 +51,10 @@ const discont = document.querySelector("#discont");
         totalSum = val + 30
     }
         total.textContent = `$${totalSum}`
+        if(val==0){
+        total.textContent =""
+        document.querySelector("#ship-sum").textContent = ""
+       document.querySelector("#sub-total-sum").textContent = ""
+      }
 }
 
- function clearCart(element) {
-   localStorage.removeItem("product");
-   element.forEach(el=>el.remove())
-   document.querySelector("#sub-total-sum").textContent = "";
-   document.querySelector("#discont").style.display = "none"
-   document.querySelector("#ship-sum").textContent = "";
-   document.querySelector("#total-sum").textContent = ""
-   document.querySelector("#quantity-in-card").style.display="none"
-    
-}

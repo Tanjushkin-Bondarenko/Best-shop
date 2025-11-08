@@ -123,7 +123,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 15px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    .product{
+        flex: 1 0 30%;
+    } 
        }
 
     #page-info{

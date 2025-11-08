@@ -18,7 +18,7 @@ export async function viewProduct(id){
       quantity.textContent = Number(quantity.textContent) +1
     });
     subBtn.addEventListener("click", ()=>{
-      if(quantity.textContent == 0)return
+      if(quantity.textContent == 1)return
       quantity.textContent = Number(quantity.textContent) -1
     })
 

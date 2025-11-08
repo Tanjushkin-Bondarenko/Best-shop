@@ -42,3 +42,19 @@ export function move(positive = true, element){
     element.scrollLeft = positive ? element.scrollLeft + slideWidth : element.scrollLeft - slideWidth 
 }
     
+
+const slides = document.querySelector("#goods-block");
+
+let position =0
+let direction = 1
+function showNextSlide() {
+  position += direction * 10;
+  if (position >= 90) direction = -1; 
+  if (position <= -100) direction = 1;
+  slides.style.transform = `translateX(${position}%)`;
+
+//   requestAnimationFrame(showNextSlide)
+  
+}
+
+setInterval(showNextSlide, 1000)

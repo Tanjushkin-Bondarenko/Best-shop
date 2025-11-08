@@ -5,23 +5,27 @@ export function getCurrenElmentInLocalStorige(item, data){
              element.size  === item.size  && 
              element.color  === item.color &&
             element.category  === item.category)
-            
             return current
 }
 
 export function updateLocalStorige(item, newVal1, newVal2){
-       let array = JSON.parse(localStorage.getItem("product")) || []
-       let updateEl = getCurrenElmentInLocalStorige(item, array)[0]
-       let index = array.findIndex(el=>
-              el.id  ===item.id  &&
-             el.size  === item.size  && 
-             el.color  === item.color &&
-            el.category  === item.category)
+       let saveProducts = JSON.parse(localStorage.getItem("product")) || []
+       let updateEl = getCurrenElmentInLocalStorige(item, saveProducts)[0]
+       let index = findIndexCurrentElem(saveProducts, item)
   
        if(index !== -1){
        updateEl.total = newVal2;
        updateEl.quantity = newVal1;
-       // array.splice(index, 1, updateEl)
-       localStorage.setItem("product", JSON.stringify(array))
+    
+       localStorage.setItem("product", JSON.stringify(saveProducts))
        }
+}
+
+export function findIndexCurrentElem(array, item){
+ let index= array.findIndex(el=>
+              el.id  ===item.id  &&
+             el.size  === item.size  && 
+             el.color  === item.color &&
+            el.category  === item.category)
+            return index
 }

@@ -10,6 +10,7 @@ let sortedProd = [];
 
 export default function showProducts(){
  const currentPage = document.querySelector("#page");
+ const prevPage = document.querySelector("#prev-page")
 const nextPage = document.querySelector("#next-page"); 
 const prevBtn = document.querySelector("#previous-page-btn");
 const nextBtn = document.querySelector("#next-page-btn");
@@ -153,9 +154,13 @@ const start = (page - 1) * itemsOnPage;
     
    currentPage.textContent = page;
    currentPage.classList.add("activePage")
-   
+   if(page > 1 ){
+    prevPage.style.display = "inline-flex"
+    prevPage.textContent = page-1
+}
     if(list.length > currentItems.length){
-        nextPage.style.display = "inline-block"
+        nextPage.style.display = "inline-flex"
+       
         nextPage.textContent = page + 1
     }
     if(end>= list.length)nextPage.style.display = "none"
