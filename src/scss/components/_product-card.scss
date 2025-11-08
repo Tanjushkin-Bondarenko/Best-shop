@@ -1,6 +1,7 @@
 @use "buttons";
 @use "../abstracts/extends";
 @use "../abstracts/variables" as var;
+
 .product{
     display: flex;
     flex-direction: column;
@@ -10,29 +11,35 @@
     font-weight: 700;
     font-size: 19px;
     justify-content: space-between;       
+
 .photo-sale-block{
     height: 400px;
     width: 280px;
     overflow: hidden;
+
 img{
     height: 400px;
     width: 100%;
 }
+
     .sale-button{
     @extend .sale;
         }
-         
         }
+
         .price {
                 color: var.$grey;
                 text-align: center;
             }
-          #addToCard{
+
+          #add-to-card{
            color: var.$white;
+
            & :hover{
                 cursor: pointer;
             }
        }
+
         h6 {
                 width: 180px;
                 text-align: center;

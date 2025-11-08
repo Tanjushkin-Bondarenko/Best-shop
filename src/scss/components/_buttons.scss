@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+
 button{
     background-color: var.$pink;
     color: var.$white;
@@ -7,9 +8,11 @@ button{
     height: 60px;
     border: none;
 }
+
 button:hover{
     cursor: pointer;        
 }
+
 .filter-btn{
     background-color: var.$white;
     color: var.$grey;
@@ -20,6 +23,7 @@ button:hover{
     font-size: 16px;  
     
 }
+
 .page-change-btn{
     width: 88px;
     height: 40px;
@@ -34,8 +38,8 @@ button:hover{
     font-family: var.$secondary-font;
    
 }
-.addToCart{
-        width: 150px;
+
+.add-to-cart{
         height: 40px;
         text-align: center;
         width: 150px;

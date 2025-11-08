@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
-@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@import 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+@import 'https://fonts.cdnfonts.com/css/helvetica-neue-55';
+@import 'https://fonts.cdnfonts.com/css/sf-pro-display';
 button {
   background-color: #B92770;
-  color: #FFFFFF;
+  color: #FFF;
   font-weight: 700;
   width: 174px;
   height: 60px;
@@ -15,7 +15,7 @@ button:hover {
 }
 
 .filter-btn {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   color: #504e49;
   border: 2px solid #E9E9ED;
   height: 40px;
@@ -28,8 +28,8 @@ button:hover {
   width: 88px;
   height: 40px;
   margin-top: 10px;
-  background: #FFFFFF;
-  color: #000000;
+  background: #FFF;
+  color: #000;
   border: 2px solid #B92770;
   text-align: center;
   text-transform: uppercase;
@@ -38,8 +38,7 @@ button:hover {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-.addToCart {
-  width: 150px;
+.add-to-cart {
   height: 40px;
   text-align: center;
   width: 150px;
@@ -48,7 +47,7 @@ button:hover {
 
 .primiry {
   font-family: "Montserrat", sans-serif;
-  color: #000000;
+  color: #000;
   font-weight: 900;
 }
 
@@ -128,7 +127,7 @@ button:hover {
 }
 #header-content #header-menu a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 #header-content #header-menu .active-menu {
   color: #B92770;
@@ -143,7 +142,7 @@ button:hover {
   position: absolute;
   top: 10%;
   left: 70%;
-  background-color: #FFFFFF;
+  background-color: #FFF;
 }
 #popup .popup-content {
   width: 340px;
@@ -214,7 +213,7 @@ footer #section-benefits {
   flex-wrap: wrap;
   padding: 40px 140px;
   background-image: url("/src/assets/img/our-benefits-bg.png");
-  color: #FFFFFF;
+  color: #FFF;
 }
 footer #section-benefits h4 {
   width: 100%;
@@ -229,7 +228,7 @@ footer #section-benefits .benefits-block {
   display: flex;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 500;
-  font-style: Medium;
+  font-style: medium;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -241,15 +240,15 @@ footer #section-benefits .benefits-block img {
 footer #section {
   display: flex;
   justify-content: space-between;
-  padding: 130px 130px 0 130px;
+  padding: 130px 130px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #000000;
+  color: #000;
 }
 footer #section h5 {
   font-weight: 700;
-  padding: 0 0 18px 0;
+  padding: 0 0 18px;
   margin: 0;
 }
 footer #section #footer-menu {
@@ -266,11 +265,11 @@ footer #section #footer-menu ul :hover {
 }
 footer #section #footer-menu ul li {
   list-style: none;
-  margin: 5px 0 0 0;
+  margin: 5px 0 0;
 }
 footer #section #footer-menu ul li a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 footer #section #footer-menu #shipping {
   margin-top: 50px;
@@ -310,7 +309,6 @@ footer #copyright {
 * {
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -325,9 +323,7 @@ svg {
 
 html,
 body {
-  height: 100%;
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
   max-width: 100%;
 }
 
@@ -344,7 +340,7 @@ body {
   width: 100%;
   height: 554px;
   font-family: "Montserrat", sans-serif;
-  color: #FFFFFF;
+  color: #FFF;
 }
 #about #info h2 {
   font-weight: 700;
@@ -436,7 +432,7 @@ body {
 #about #team #our-team .team {
   height: 480px;
   width: 30%;
-  margin: 50px auto 30px auto;
+  margin: 50px auto 30px;
 }
 #about #team #our-team .team .name {
   font-size: 22px;
@@ -453,10 +449,10 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 400px;
-  margin: 0 auto 120px auto;
+  margin: 0 auto 120px;
   justify-content: space-between;
   align-items: center;
-  color: #FFFFFF;
+  color: #FFF;
 }
 #about #offer-block p {
   text-align: center;
@@ -495,7 +491,7 @@ body {
   height: 200px;
 }
 #cart #card-bg h3 {
-  color: #FFFFFF;
+  color: #FFF;
   text-align: center;
   font-size: 50px;
   font-weight: 700;
@@ -508,7 +504,7 @@ body {
 #cart #cart #menu {
   display: flex;
   background-color: #504e49;
-  color: #FFFFFF;
+  color: #FFF;
   height: 60px;
   text-transform: uppercase;
   justify-content: space-between;
@@ -563,15 +559,15 @@ body {
 #cart #cart #product-in-cart .prouct-container .quantity-block button {
   width: 35px;
   height: 35px;
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #FFF;
+  color: #000;
   font-size: 25px;
 }
 #cart #cart #product-in-cart .prouct-container .quantity-block button:hover {
   cursor: pointer;
 }
 #cart #cart #product-in-cart .prouct-container .delete-btn {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   width: 25px;
   height: 25px;
 }
@@ -584,7 +580,7 @@ body {
 #cart #cart-buttons {
   display: grid;
   width: 80%;
-  margin: 15px auto 120px auto;
+  margin: 15px auto 120px;
   justify-content: space-between;
 }
 #cart #cart-buttons button {
@@ -599,7 +595,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  color: #FFFFFF;
+  color: #FFF;
   font-size: 17px;
   font-weight: 700;
   width: 570px;
@@ -623,7 +619,7 @@ body {
 
 #catalog-section {
   width: 80%;
-  margin: 35px auto 120px auto;
+  margin: 35px auto 120px;
 }
 #catalog-section #showuing-pages {
   font-weight: 400;
@@ -638,7 +634,7 @@ body {
   font-weight: 400;
 }
 #catalog-section #sort-block .filter-button {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   border: 1px solid #504e49;
   height: 40px;
   width: 200px;
@@ -682,7 +678,7 @@ body {
   position: relative;
   display: block;
   padding: 4px 12px;
-  background-color: #FFFFFF;
+  background-color: #FFF;
   color: #504e49;
   cursor: pointer;
 }
@@ -690,9 +686,9 @@ body {
   position: absolute;
   display: none;
   list-style: none;
-  background: #FFFFFF;
+  background: #FFF;
   color: #504e49;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #FFF;
   margin: 0;
   padding: 5px 0;
   width: 150px;
@@ -711,7 +707,7 @@ body {
   display: block;
 }
 #catalog-section #sort-block .active {
-  color: #FFFFFF;
+  color: #FFF;
   background-color: #B92770;
 }
 #catalog-section #sort-block #searching {
@@ -756,8 +752,8 @@ body {
   width: 40px;
   height: 40px;
 }
-#catalog-section #product-list #list-section #page-info .activePage {
-  color: #FFFFFF;
+#catalog-section #product-list #list-section #page-info .active-page {
+  color: #FFF;
   background-color: #B92770;
 }
 #catalog-section #product-list #best-sets {
@@ -813,7 +809,7 @@ form button {
 #contact #contact-bunner h2 {
   font-size: 50px;
   font-weight: 900;
-  color: #FFFFFF;
+  color: #FFF;
 }
 #contact #contact-bunner p {
   width: 288px;
@@ -846,7 +842,7 @@ form button {
 }
 #contact #feedback {
   width: 80%;
-  margin: 130px auto 120px auto;
+  margin: 130px auto 120px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -884,7 +880,7 @@ form button {
 #contact #feedback form input {
   height: 44px;
 }
-#contact #feedback form #formBtn {
+#contact #feedback form #form-btn {
   height: 40px;
   width: 90px;
 }
@@ -938,7 +934,7 @@ form button {
 #product-cart #product #price {
   grid-column: 2/4;
   grid-row: 3/4;
-  color: #000000;
+  color: #000;
   font-weight: 700;
   font-size: 20px;
 }
@@ -961,10 +957,9 @@ form button {
   font-weight: 400;
 }
 #product-cart #product .list {
-  display: block;
   width: 100%;
   height: 30px;
-  margin: 10px 0 5px 0;
+  margin: 10px 0 5px;
   display: inline-block;
 }
 #product-cart #product #quantity-block {
@@ -981,7 +976,7 @@ form button {
 }
 #product-cart #product #quantity-block button {
   color: #504e49;
-  background-color: #FFFFFF;
+  background-color: #FFF;
   height: 38px;
   width: 30px;
 }
@@ -1017,10 +1012,10 @@ form button {
   border-right: none;
 }
 #product-cart #product-detais #product-detais-btns button {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   width: -moz-max-content;
   width: max-content;
-  color: #000000;
+  color: #000;
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1030,7 +1025,7 @@ form button {
   font-size: 14px;
   font-weight: 400;
   color: #504e49;
-  margin: 10px 0 100px 0;
+  margin: 10px 0 100px;
 }
 #product-cart #reviews-block {
   display: flex;
@@ -1104,12 +1099,7 @@ form button {
 }
 #product-cart #reviews-block #add-review-section #agree {
   display: inline-block;
-  margin: 30px 0 0 0;
-}
-#product-cart #reviews-block #add-review-section span {
-  color: #727174;
-  font-size: 13px;
-  font-weight: 400;
+  margin: 30px 0 0;
 }
 #product-cart #reviews-block #add-review-section #submit-button {
   margin: 30px 0;
@@ -1127,7 +1117,7 @@ form button {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  margin: 70px 0 10px 0;
+  margin: 70px 0 10px;
 }
 #product-cart #also-like svg {
   margin: 0 auto;
@@ -1135,7 +1125,7 @@ form button {
 #product-cart #also-like #also-like-products {
   display: flex;
   justify-content: space-between;
-  margin: 60px 0 120px 0;
+  margin: 60px 0 120px;
 }
 
 .product {
@@ -1161,10 +1151,10 @@ form button {
   color: #504e49;
   text-align: center;
 }
-.product #addToCard {
-  color: #FFFFFF;
+.product #add-to-card {
+  color: #FFF;
 }
-.product #addToCard :hover {
+.product #add-to-card :hover {
   cursor: pointer;
 }
 .product h6 {
@@ -1207,8 +1197,8 @@ form button {
 }
 #home #discont-block {
   display: flex;
-  background-color: #FFFFFF;
-  margin: -10% auto 0 auto;
+  background-color: #FFF;
+  margin: -10% auto 0;
   width: 80%;
   box-shadow: 0px 20px 80px 0px rgba(193, 199, 212, 0.7019607843);
   height: 566px;
@@ -1246,7 +1236,7 @@ form button {
 #home #discont-block #photo-block {
   background-image: url("/src/assets/img/hp2.png");
   background-size: cover;
-  color: #FFFFFF;
+  color: #FFF;
   display: flex;
   width: 60%;
 }
@@ -1278,7 +1268,7 @@ form button {
   text-align: center;
 }
 #home .block .discription {
-  margin: 10px 0 50px 0;
+  margin: 10px 0 50px;
   font-size: 17px;
   font-weight: 400;
   text-align: center;
@@ -1288,9 +1278,9 @@ form button {
   overflow-x: hidden;
 }
 #home #travel-suitcases h3 {
-  margin: 100px 0 0 0;
+  margin: 100px 0 0;
   text-align: center;
-  color: #000000;
+  color: #000;
 }
 #home #travel-suitcases #goods-block {
   display: flex;
@@ -1310,7 +1300,7 @@ form button {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  color: #FFFFFF;
+  color: #FFF;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.4s ease;
@@ -1338,7 +1328,7 @@ form button {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  color: #FFFFFF;
+  color: #FFF;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.4s ease;
@@ -1366,7 +1356,7 @@ form button {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  color: #FFFFFF;
+  color: #FFF;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.4s ease;
@@ -1394,7 +1384,7 @@ form button {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  color: #FFFFFF;
+  color: #FFF;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease, box-shadow 0.4s ease;
@@ -1416,7 +1406,7 @@ form button {
 }
 #home #selected,
 #home #new {
-  margin: 110px auto 120px auto;
+  margin: 110px auto 120px;
 }
 #home #selected .track,
 #home #new .track {
@@ -1449,8 +1439,8 @@ form button {
   display: flex;
   margin: 25px auto;
 }
-#home #selected .arrowButton,
-#home #new .arrowButton {
+#home #selected .arrow-button,
+#home #new .arrow-button {
   position: relative;
   transform: translateY(-100%);
   background-color: white;
@@ -1464,18 +1454,18 @@ form button {
   opacity: 1;
   transition: opacity 0.1s;
 }
-#home #selected .arrowButton svg,
-#home #new .arrowButton svg {
+#home #selected .arrow-button svg,
+#home #new .arrow-button svg {
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
   height: 20px;
   fill: #333;
 }
-#home #selected .arrowButton:focus,
-#home #selected .arrowButton:hover,
-#home #new .arrowButton:focus,
-#home #new .arrowButton:hover {
+#home #selected .arrow-button:focus,
+#home #selected .arrow-button:hover,
+#home #new .arrow-button:focus,
+#home #new .arrow-button:hover {
   opacity: 1;
 }
 #home #selected .prev,
@@ -1497,7 +1487,7 @@ form button {
   justify-content: space-around;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  color: #FFFFFF;
+  color: #FFF;
 }
 #home #offer-block div {
   width: 40%;
@@ -1529,7 +1519,7 @@ form button {
 }
 #home #castomers-reviw #customers {
   display: flex;
-  margin: 60px auto 120px auto;
+  margin: 60px auto 120px;
   text-align: center;
   gap: 20px;
 }
@@ -1540,8 +1530,8 @@ form button {
   gap: 24px;
   height: 440px;
   margin: 40px auto;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 20px 80px 0px rgba(193, 199, 212, 0.7019607843);
+  border: 1px solid #FFF;
+  box-shadow: 0 20px 80px 0 rgba(193, 199, 212, 0.7019607843);
   font-size: 17px;
 }
 #home #castomers-reviw #customers .customer-block img {

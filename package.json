@@ -14,10 +14,19 @@
     "test": "exit 0",
     "sass": "sass src/scss/main.scss src/scss/main.css",
     "sass:watch": "sass --watch src/scss/main.scss:src/scss/main.css",
-    "build": "npm run sass"
+    "build": "npm run sass",
+    "lint:js": "eslint . --ext .js",
+  "lint:scss": "stylelint \"**/*.scss\"",
+  "lint": "npm run lint:js && npm run lint:scss",
+  "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
-    "sass": "^1.93.2"
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "sass": "^1.93.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard-scss": "^16.0.0"
   },
   "dependencies": {
     "-": "^0.0.1",

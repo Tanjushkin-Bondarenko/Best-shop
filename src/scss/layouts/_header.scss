@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as var;
+
 #header-content{
     width: 88%;
     margin: 0 auto;
@@ -10,6 +11,7 @@
         padding-top: 10px;
         display: flex;
         justify-content: space-between;
+
         #social-networks,
         #user-block{
             height: 50px;
@@ -20,17 +22,21 @@
             width: max-content;
            text-decoration: none;
            height: 28px;
+
             &:hover{
                 cursor: pointer;
             }
+
                 svg{
                     display: inline-block;
                 }}
            
             }
+
             #open-cart:hover{
                 cursor: pointer;
             }
+
             #quantity-in-card{
                 text-align: center;
                 border: 1px solid var.$pink;
@@ -45,9 +51,11 @@
             }
         
         }
+
     #logo:hover{
         cursor: pointer;
     }
+
     #header-menu {
         display: flex;
         flex-direction: row;
@@ -57,13 +65,16 @@
         font-size: 18px;
         margin: 30px auto;
         gap: 30px;
+
         a{ 
             text-decoration: none;
             color: var.$black;
         }
+
         .active-menu{
             color: var.$pink;
         }
+
         #catalog {
             margin-right: 3px;
         } 
@@ -77,27 +88,33 @@
                 top: 10%;
                 left: 70%;
                 background-color: var.$white;
+
                .popup-content{
                   width: 340px;
                   margin: 50px auto;
                 
                 form{
                     display: grid;
+
                 input{
                       width: 100%;
                     border: 1px solid var.$pink;
                 }
+
                 .required-snow{
                     color: var.$pink;
                     
                 }
+
                 #wrapper-for-email{
                  grid-column: 1/3;
                  grid-row: 1/2;
                 }
+
                 #wrapper-for-password{
                     grid-column: 1/3;
                     grid-row: 2/3;
+
                     #togle-password{
                     position: relative;
                     left: 10.5rem;
@@ -108,20 +125,24 @@
 
                     }
                 }
+
                 #wrapper-for-checkbox{
                     grid-column: 1/2;
                     grid-row: 3/4;
+
                     input{
                         width: 20px;
                         margin: 0;
                         display: inline-block;
                     }
+
                     label{
                         color: var.$light-grey;
                         font-size: 11px;
                         font-weight: 400;
                     }
                 }
+
                 .forgot-password{
                     grid-column: 2/3;
                     grid-row: 3/4;
@@ -130,6 +151,7 @@
                     font-weight: 700;
                     text-decoration: none;
                 }
+
                 #login-button{
                     grid-column: 1/3;
                     grid-row: 4/5;

@@ -16,6 +16,7 @@
 #home {
     margin: 0;
     overflow-x: hidden;
+
     #section {
         display: flex;
         align-items: center;
@@ -35,10 +36,12 @@
                 font-size: 17px;
                 color: var.$grey;
             }
+
             #view-all:hover{
                 cursor: pointer;
             }
         }
+
         img {
             width: 44vw;
             height: auto;
@@ -48,7 +51,7 @@
     #discont-block {
         display: flex;
         background-color: var.$white;
-        margin: -10% auto 0 auto;
+        margin: -10% auto 0;
         width: 80%;
         box-shadow: var.$box-shadow;
         height: 566px;
@@ -126,6 +129,7 @@
         width: 80%;
         margin: 0 auto;
         text-align: center;
+
         h3 {
             font-size: 40px;
             font-weight: 900;
@@ -133,7 +137,7 @@
         }
 
         .discription {
-            margin: 10px 0 50px 0;
+            margin: 10px 0 50px;
             font-size: 17px;
             font-weight: 400;
             text-align: center;
@@ -143,11 +147,13 @@
 
     #travel-suitcases {
         overflow-x: hidden;
+
         h3{
-            margin: 100px 0 0 0;
+            margin: 100px 0 0;
             text-align: center;
             color: var.$black;
         }
+
         #goods-block {
             display: flex;
             justify-content: space-between;
@@ -157,6 +163,7 @@
             will-change: transform;
             transform: translateZ(0);
              transition: transform 0.3s ease-in-out;
+
             @for $i from 1 to 5{
                 .cases#{$i} {
                     background-image: url("/src/assets/img/hp-travel#{$i}.png");
@@ -169,11 +176,13 @@
                     color: var.$white;
                    object-fit: cover;
                    transition: transform 0.3s ease, box-shadow 0.4s ease;
+
                    &:hover{
                     transform: scale(1.05);
-                     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                     box-shadow: 0 10px 25px rgb(0 0 0 / 30%);
                    
             }
+
                    h6 {
                 width: 170px;
                 font-weight: 700;
@@ -193,7 +202,7 @@
 
     #selected,
     #new {
-        margin: 110px auto 120px auto;
+        margin: 110px auto 120px;
 
         .track {
             overflow-x: auto;
@@ -215,8 +224,10 @@
             margin: 0 12px; 
             width: 24%;
             height: 600px;
+
         .sale-button{
                 @extend .sale;
+
                 left:-30%;
     }
    
@@ -229,7 +240,7 @@
 
         }
 
-        .arrowButton {
+        .arrow-button {
             position: relative;
             transform: translateY(-100%);
             background-color: white;
@@ -251,8 +262,8 @@
 
         }
 
-        .arrowButton:focus,
-        .arrowButton:hover {
+        .arrow-button:focus,
+        .arrow-button:hover {
             opacity: 1;
         }
 
@@ -304,7 +315,6 @@
         }
 
         .descr {
-
             font-size: 18px;
             font-weight: 400;
         }
@@ -315,12 +325,14 @@
             
         }
     }
+
     #castomers-reviw{
     #customers{
         display: flex;
-        margin: 60px auto 120px auto;
-            text-align: center;
-            gap: 20px;
+        margin: 60px auto 120px;
+        text-align: center;
+        gap: 20px;
+
         .customer-block{
             display: grid;
             justify-items: center;
@@ -329,15 +341,18 @@
               height: 440px;
               margin: 40px auto;
             border: 1px solid var.$white;
-         box-shadow: 0px 20px 80px 0px #C1C7D4B3;
+         box-shadow: 0 20px 80px 0 #C1C7D4B3;
          font-size: 17px;
+
          img{
             width: 98px;
             height: 98px;
          }
+
          .review{
             font-weight: 400;
          }
+
          .customer-name{
             color: var.$pink;
             font-weight: 700;

@@ -9,183 +9,182 @@ let prodList = []
 let sortedProd = [];
 
 export default function showProducts(){
- const currentPage = document.querySelector("#page");
- const prevPage = document.querySelector("#prev-page")
-const nextPage = document.querySelector("#next-page"); 
-const prevBtn = document.querySelector("#previous-page-btn");
-const nextBtn = document.querySelector("#next-page-btn");
-const sorting = document.querySelector("#sorting");
-const searching =  document.querySelector("#searching");
-const filters = document.querySelector("#filters");
-const filterBtn = document.querySelector("#filter-button");
-const hideBtn =  document.querySelector("#hide-btn")
-const categoryInput = document.querySelector("#category-filter");
-const colorInput = document.querySelector("#color-filter");
-const sizeInput = document.querySelector("#size-filter");
-const sale= document.querySelector("#sale");
- const container = document.querySelector("#list");
+  const currentPage = document.querySelector("#page");
+  const prevPage = document.querySelector("#prev-page")
+  const nextPage = document.querySelector("#next-page"); 
+  const prevBtn = document.querySelector("#previous-page-btn");
+  const nextBtn = document.querySelector("#next-page-btn");
+  const sorting = document.querySelector("#sorting");
+  const searching =  document.querySelector("#searching");
+  const filters = document.querySelector("#filters");
+  const filterBtn = document.querySelector("#filter-button");
+  const hideBtn =  document.querySelector("#hide-btn")
+  const categoryInput = document.querySelector("#category-filter");
+  const colorInput = document.querySelector("#color-filter");
+  const sizeInput = document.querySelector("#size-filter");
+  const sale= document.querySelector("#sale");
+  const container = document.querySelector("#list");
 
 
-// Load JSON data (local file)
-fetch("/src/assets/data.json")
+  // Load JSON data (local file)
+  fetch("/src/assets/data.json")
     .then(res => res.json())
     .then(result => {
-        products = prodList= result.data;
-        renderPage(prodList, page);
+      products = prodList= result.data;
+      renderPage(prodList, page);
     });
  
-    //show filters
-   filterBtn.addEventListener("click", (e)=>{
-        sorting.style.display = "none";
-        searching.style.display = "none";
-        filters.style.display = "flex";
-     e.target.style.display = "none"
-    })
+  //show filters
+  filterBtn.addEventListener("click", (e)=>{
+    sorting.style.display = "none";
+    searching.style.display = "none";
+    filters.style.display = "flex";
+    e.target.style.display = "none"
+  })
   //hide filters
   hideBtn.addEventListener("click", ()=>{
-        sorting.style.display = "flex";
-        searching.style.display = "flex";
-        filterBtn.style.display = "block"
-        filters.style.display = "none";
-    })
+    sorting.style.display = "flex";
+    searching.style.display = "flex";
+    filterBtn.style.display = "block"
+    filters.style.display = "none";
+  })
    
-    //show Sale
-   sale.addEventListener("click",(e)=>{
-     prodList = []
-      if(sale.checked){
-         prodList = products.filter(item =>{
-       return item.salesStatus == true 
-    })
+  //show Sale
+  sale.addEventListener("click",(e)=>{
+    prodList = []
+    if(sale.checked){
+      prodList = products.filter(item =>{
+        return item.salesStatus == true 
+      })
       renderPage(prodList, page)
       e.stopPropagation()
-   }else{sale.checked=false
-    renderPage(products, page)
-   }}, true)
+    }else{sale.checked=false
+      renderPage(products, page)
+    }}, true)
 
-    function filterProducts(){
-        let category = categoryInput.value.trim().toLowerCase();
-        let color = colorInput.value.trim().toLowerCase();
-        let size = sizeInput.value.trim().toLowerCase();
+  function filterProducts(){
+    let category = categoryInput.value.trim().toLowerCase();
+    let color = colorInput.value.trim().toLowerCase();
+    let size = sizeInput.value.trim().toLowerCase();
         
-        const filtered = products.filter(prod=>{
-            const matchesCategory = !category || prod.category.toLowerCase() == category
-            const matchesColor = !color || prod.color.toLowerCase() == color;
-            const matchesSize = !size || prod.size.toLowerCase() == size;
-            return matchesCategory && matchesColor && matchesSize
-        })
-        renderPage(filtered, page)
-    }
+    const filtered = products.filter(prod=>{
+      const matchesCategory = !category || prod.category.toLowerCase() == category
+      const matchesColor = !color || prod.color.toLowerCase() == color;
+      const matchesSize = !size || prod.size.toLowerCase() == size;
+      return matchesCategory && matchesColor && matchesSize
+    })
+    renderPage(filtered, page)
+  }
  
-    //drop down list
-document.querySelectorAll(".dropdown li").forEach(item=>{
+  //drop down list
+  document.querySelectorAll(".dropdown li").forEach(item=>{
     item.addEventListener("click", (e)=>{
-        e.target.classList.add("active")
-        prodList =sortedProd= products.sort(compareProductsByPrice)
-        if(e.target.dataset.sort=="price-asc"){
+      e.target.classList.add("active")
+      prodList =sortedProd= products.sort(compareProductsByPrice)
+      if(e.target.dataset.sort=="price-asc"){
         renderPage(prodList, page) }
 
-        if(e.target.dataset.sort=="price-desc"){
-            prodList= sortedProd.reverse()
-            renderPage(prodList, page)}
+      if(e.target.dataset.sort=="price-desc"){
+        prodList= sortedProd.reverse()
+        renderPage(prodList, page)}
 
-        if(e.target.dataset.sort=="popularity"){
-             prodList = products.sort(compareProductsByPopularity)
-              renderPage(prodList, page)}
+      if(e.target.dataset.sort=="popularity"){
+        prodList = products.sort(compareProductsByPopularity)
+        renderPage(prodList, page)}
 
-        if(e.target.dataset.sort=="rating"){
-             prodList = products.sort(compareProductsByRating)
-            renderPage(prodList, page)}
+      if(e.target.dataset.sort=="rating"){
+        prodList = products.sort(compareProductsByRating)
+        renderPage(prodList, page)}
     })
-})
+  })
 
-document.querySelector("#search").addEventListener("keydown", (e)=>{
+  document.querySelector("#search").addEventListener("keydown", (e)=>{
     if(e.key == "Enter"){
-       products.map(item => {
-    if(e.target.value == "")return
-    if(e.target.value == item.name ||
+      products.map(item => {
+        if(e.target.value == "")return
+        if(e.target.value == item.name ||
         e.target.value == item.color ||
         e.target.value.toUpperCase() ==  item.size ||
         e.target.value == item.size ||
         e.target.value == item.category
-    )prodList =[]
-    return prodList.push(item)
- })
-     renderPage(prodList, page)}
-})
+        )prodList =[]
+        return prodList.push(item)
+      })
+      renderPage(prodList, page)}
+  })
 
 
-colorInput.addEventListener("input", filterProducts);
-categoryInput.addEventListener("input", filterProducts)
-sizeInput.addEventListener("input", filterProducts)
+  colorInput.addEventListener("input", filterProducts);
+  categoryInput.addEventListener("input", filterProducts)
+  sizeInput.addEventListener("input", filterProducts)
 
 
-document.querySelector("#clear-btn").addEventListener("click", ()=>{
+  document.querySelector("#clear-btn").addEventListener("click", ()=>{
     colorInput.value = "";
     categoryInput.value = "";
     sizeInput.value ="";
     sale.checked=false;
     renderPage(products, page)
-})
+  })
 
-// Render products
- function renderPage(list, page) {
+  // Render products
+  function renderPage(list, page) {
     container.innerHTML = "";
     if(list.length < itemsOnPage){ 
-        itemsOnPage = list.length
+      itemsOnPage = list.length
     }else{ itemsOnPage = 12}
-const start = (page - 1) * itemsOnPage;
-  const end = start + itemsOnPage;
-  const currentItems = list.slice(start, end);
+    const start = (page - 1) * itemsOnPage;
+    const end = start + itemsOnPage;
+    const currentItems = list.slice(start, end);
     if (currentItems.length === 0) {
-        container.innerHTML = "<p>No products found.</p>";
-        return;
+      container.innerHTML = "<p>No products found.</p>";
+      return;
     }
     currentItems.forEach(prod => {
 
-    const addToCardBtn = createButton()
-    addToCardBtn.textContent = "View Product";
-    addToCardBtn.addEventListener("click", ()=>{
+      const addToCardBtn = createButton()
+      addToCardBtn.textContent = "View Product";
+      addToCardBtn.addEventListener("click", ()=>{
         viewProduct(prod.id)
-    })
-    const item = buildCard(prod)
-    item.append(addToCardBtn)
-    container.appendChild(item);
+      })
+      const item = buildCard(prod)
+      item.append(addToCardBtn)
+      container.appendChild(item);
     });
     
-   currentPage.textContent = page;
-   currentPage.classList.add("activePage")
-   if(page > 1 ){
-    prevPage.style.display = "inline-flex"
-    prevPage.textContent = page-1
-}
+    currentPage.textContent = page;
+    currentPage.classList.add("active-page")
+    if(page > 1 ){
+      prevPage.style.display = "inline-flex"
+      prevPage.textContent = page-1
+    }
     if(list.length > currentItems.length){
-        nextPage.style.display = "inline-flex"
+      nextPage.style.display = "inline-flex"
        
-        nextPage.textContent = page + 1
+      nextPage.textContent = page + 1
     }
     if(end>= list.length)nextPage.style.display = "none"
-      toggleButtons()
-}
+    toggleButtons()
+  }
 
-function toggleButtons() {
+  function toggleButtons() {
     if(page === 1){
-        prevBtn.style.visibility = "hidden"; 
-    }else(prevBtn.style.visibility = "visible")
-   nextBtn.disabled = page * itemsOnPage >= list.length;
-}
+      prevBtn.style.visibility = "hidden"; 
+      prevPage.style.display = "none"
+    }
 
-prevBtn.addEventListener("click", ()=>{
-    if(page > 1){
+    prevBtn.addEventListener("click", ()=>{
+      if(page > 1){
         page--;
         renderPage(prodList, page)
-    }})
+      }})
 
-nextBtn.addEventListener("click", ()=>{
-    if(page*itemsOnPage <prodList.length){
-          page++
+    nextBtn.addEventListener("click", ()=>{
+      if(page*itemsOnPage <prodList.length){
+        page++
         renderPage(prodList, page)
         prevBtn.style.visibility = "visible"
-    }
-})
+      }
+    })
+  }
 }
-
