@@ -54,7 +54,7 @@ export default function showProducts(){
     prodList = []
     if(sale.checked){
       prodList = products.filter(item =>{
-        return item.salesStatus == true 
+        return item.salesStatus
       })
       renderPage(prodList, page)
       e.stopPropagation()
@@ -77,30 +77,32 @@ export default function showProducts(){
   }
  
   //drop down list
-  document.querySelectorAll(".dropdown li").forEach(item=>{
+    let dropDownElements =  document.querySelectorAll(".dropdown li")
+  for(let item of dropDownElements){{
     item.addEventListener("click", (e)=>{
       e.target.classList.add("active")
-      prodList =sortedProd= products.sort(compareProductsByPrice)
+      prodList = products.toSorted(compareProductsByPrice);
+      sortedProd = prodList
       if(e.target.dataset.sort=="price-asc"){
         renderPage(prodList, page) }
 
       if(e.target.dataset.sort=="price-desc"){
-        prodList= sortedProd.reverse()
+        prodList= sortedProd.toReversed()
         renderPage(prodList, page)}
 
       if(e.target.dataset.sort=="popularity"){
-        prodList = products.sort(compareProductsByPopularity)
+        prodList = products.toSorted(compareProductsByPopularity)
         renderPage(prodList, page)}
 
       if(e.target.dataset.sort=="rating"){
-        prodList = products.sort(compareProductsByRating)
+        prodList = products.toSorted(compareProductsByRating)
         renderPage(prodList, page)}
     })
-  })
+  }
 
   document.querySelector("#search").addEventListener("keydown", (e)=>{
     if(e.key == "Enter"){
-      products.map(item => {
+      products.forEach(item => {
         if(e.target.value == "")return
         if(e.target.value == item.name ||
         e.target.value == item.color ||
@@ -140,14 +142,13 @@ export default function showProducts(){
       container.innerHTML = "<p>No products found.</p>";
       return;
     }
-    currentItems.forEach(prod => {
-
+   for(let cur of currentItems){
       const addToCardBtn = createButton()
       addToCardBtn.textContent = "View Product";
       addToCardBtn.addEventListener("click", ()=>{
-        viewProduct(prod.id)
+        viewProduct(cur.id)
       })
-      const item = buildCard(prod)
+      const item = buildCard(cur)
       item.append(addToCardBtn)
       container.appendChild(item);
     });
