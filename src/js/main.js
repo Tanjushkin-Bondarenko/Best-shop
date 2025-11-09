@@ -2,8 +2,8 @@ import { createCourosel, caruselMove, move} from "./homepage/createCarousel.js"
 import { loadHTML, loadPage, showActivePage } from "./homepage/loadHtml.js";
 
 
-loadHTML('#header', "./components/header.html");
-loadHTML("#footer", "./components/footer.html");
+loadHTML('#header', "components/header.html");
+loadHTML("#footer", "components/footer.html");
 
 document.querySelector("#view-all").addEventListener("click", ()=>{
   loadPage("catalog");
