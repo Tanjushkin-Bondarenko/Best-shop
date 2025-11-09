@@ -17,7 +17,7 @@ export function showProductDetail(id){
     addProductToCart(event.target.parentElement)
   })
 
-  fetch("/docs/assets/data.json")
+  fetch("/src/assets/data.json")
     .then(res => res.json())
     .then(response =>{
       let prod = response.data
@@ -31,7 +31,7 @@ export function showProductDetail(id){
         {i.value !== current.size ? i.disabled=true : i.disabled =false }
         )
       }
-      img.src=`/docs/assets/img/${current.imageUrl}`
+      img.src=`/src/assets/img/${current.imageUrl}`
       img.dataset.info = current.imageUrl
       document.querySelector("#title").textContent = current.name;
       document.querySelector("#product").dataset.id = current.id
@@ -78,6 +78,6 @@ export function showProductDetail(id){
 
 export function createSvgIcon(val){
   return `<svg height="20" width="20">
-<use href='/docs/assets/sprite.svg#${val}'>
+<use href='/src/assets/sprite.svg#${val}'>
 </use></svg>`   
 }

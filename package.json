@@ -16,9 +16,9 @@
     "sass:watch": "sass --watch src/scss/main.scss:src/scss/main.css",
     "build": "npm run sass",
     "lint:js": "eslint . --ext .js",
-  "lint:scss": "stylelint \"**/*.scss\"",
-  "lint": "npm run lint:js && npm run lint:scss",
-  "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.scss\" --fix"
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:fix": "eslint . --ext .js --fix && stylelint \"**/*.scss\" --fix"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

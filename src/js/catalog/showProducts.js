@@ -27,7 +27,7 @@ export default function showProducts(){
 
 
   // Load JSON data (local file)
-  fetch("/docs/assets/data.json")
+  fetch("/src/assets/data.json")
     .then(res => res.json())
     .then(result => {
       products = prodList= result.data;
