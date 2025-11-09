@@ -50,14 +50,15 @@ export function addProductToCart(element){
 }
 
 function showError(element){
-  element.querySelectorAll("select").forEach(el=>{
+  const selected =  element.querySelectorAll("select")
+  for(let el of selected){
     if(el.value == ""){
       el.nextElementSibling.style.display = "block";
         
     }else{
       el.nextElementSibling.style.display = "none"
     }
-  })
+  }
 }
 
 function changeQuantityInCardIcon(element, num){
