@@ -12,7 +12,7 @@ export function deleteItem(cart, item,array, node){
   showSumToPay(updateSum, subTotal)
   node.remove()
         
-  if(document.querySelectorAll("#product-container").length == 0){
+  if(document.querySelectorAll("#product-in-cart > div").length == 0){
     document.querySelector("#empty-cart-isnfo").style.display = "block";
   }
 }
@@ -44,9 +44,9 @@ export function decrease(nodeQuantity, nodeTotal, nodeCart, element){
   }
 }
 
-export  function clearCart(element) {
+export  function clearCart(elements) {
   localStorage.removeItem("product");
-  element.forEach(el=>el.remove())
+  for(let el of elements)el.remove()
   document.querySelector("#sub-total-sum").textContent = "";
   document.querySelector("#discont").style.display = "none"
   document.querySelector("#ship-sum").textContent = "";
