@@ -28,14 +28,14 @@ export function createCourosel(url){
     })
 }
 
-export function caruselMove(positive = true, element) {
+export function caruselMove(element, positive = true) {
   let slide = document.querySelector("#new-track > :nth-child(1)")
   if (!slide) return
   const slideWidth = slide.clientWidth;
   element.scrollLeft = positive ? element.scrollLeft + slideWidth : element.scrollLeft - slideWidth
 }
 
-export function move(positive = true, element){
+export function move(element, positive = true){
   let slide = document.querySelector(".product")
   if (!slide) return
   const slideWidth = slide.clientWidth;
