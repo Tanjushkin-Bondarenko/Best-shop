@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # або master, залежно від вашої основної гілки
+      - gh-pages
 
 jobs:
   build:
@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './dist' # Шлях до папки, яку генерує ваша команда npm run build
+          path: './src' # Шлях до папки, яку генерує ваша команда npm run build
 
   deploy:
     needs: build
