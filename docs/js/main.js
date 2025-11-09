@@ -2,8 +2,8 @@ import { createCourosel, caruselMove, move} from "./homepage/createCarousel.js"
 import { loadHTML, loadPage, showActivePage } from "./homepage/loadHtml.js";
 
 
-loadHTML('#header', "components/header.html");
-loadHTML("#footer", "components/footer.html");
+loadHTML('#header', "../components/header.html");
+loadHTML("#footer", "../components/footer.html");
 
 
 document.querySelector("#view-all").addEventListener("click", ()=>{
@@ -11,7 +11,7 @@ document.querySelector("#view-all").addEventListener("click", ()=>{
   showActivePage("catalog")
 });
 
-createCourosel("/docs/assets/data.json");
+createCourosel("../assets/data.json");
 
 const newTrack = document.querySelector("#new-track");
 const selectedTrack = document.querySelector("#selected-track");
