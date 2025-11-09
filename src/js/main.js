@@ -18,9 +18,9 @@ const selectedTrack = document.querySelector("#selected-track");
 
 
 document.querySelector("#new-next").addEventListener("click", 
-  () => caruselMove(true, newTrack));
+  () => caruselMove(newTrack, true));
 document.querySelector("#new-prev").addEventListener("click", 
-  () => caruselMove(false, newTrack));
+  () => caruselMove(newTrack, false));
 
 newTrack.addEventListener("wheel", (e) => {
   e.preventDefault()
@@ -33,10 +33,10 @@ newTrack.addEventListener("wheel", (e) => {
 })
 
 document.querySelector("#next").addEventListener("click", 
-  () => move(true, selectedTrack));
+  () => move(selectedTrack, true));
 
 document.querySelector("#prev").addEventListener("click", 
-  () => move(false, selectedTrack));
+  () => move(selectedTrack, false));
 
 selectedTrack.addEventListener("wheel", (e) => {
   e.preventDefault()
