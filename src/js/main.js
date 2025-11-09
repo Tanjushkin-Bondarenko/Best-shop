@@ -1,6 +1,7 @@
 import { createCourosel, caruselMove, move} from "./homepage/createCarousel.js"
 import { loadHTML, loadPage, showActivePage } from "./homepage/loadHtml.js";
 
+
 loadHTML('#header', "/src/components/header.html");
 loadHTML("#footer", "/src/components/footer.html");
 
