@@ -4,35 +4,18 @@ on:
   push:
     branches:
       - gh-pages
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Якщо ваш проект використовує Node.js/npm для збірки (у вас є package.json)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project # Запустіть вашу команду збірки (переконайтеся, що вона є в package.json "scripts")
-        run: npm run build
-
-      # Крок для завантаження артефакту (він шукає папку dist за замовчуванням)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: './src' # Шлях до папки, яку генерує ваша команда npm run build
+          path: './src'
 
   deploy:
-    needs: build
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
