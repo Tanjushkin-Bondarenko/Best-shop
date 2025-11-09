@@ -1,6 +1,5 @@
-import { createPath } from "../homepage/loadHtml.js";
+import { createPath, loadPage } from "../homepage/loadHtml.js";
 import { buildProductInCart } from "./buildProductInCart.js";
-import { loadPage } from "../homepage/loadHtml.js";
 import { clearCart } from "./productCartHendlers.js";
 
 export async function openCart(){
@@ -16,7 +15,9 @@ export async function openCart(){
 
   let products = JSON.parse(localStorage.getItem("product"))
   const arrProd = products.map(prod=> buildProductInCart(prod));
-  arrProd.forEach(p=>{cartProducts.append(p)})
+for(let el of arrProd){
+    cartProducts.append(el)
+  }  
   products.map(el=> sum+= el.total)
   showSumToPay(sum, subTotal)
   let container =  document.querySelectorAll(".prouct-container")
