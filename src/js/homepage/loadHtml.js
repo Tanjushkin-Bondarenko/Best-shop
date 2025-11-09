@@ -39,7 +39,7 @@ export async function loadPage(page) {
   if(page === "home"){
     mainContent.style.display = "none";
     homePage.style.display = "block";
-    createCourosel("/src/assets/data.json")
+    createCourosel("/assets/data.json")
   }else{
     mainContent.style.display = "block";
     homePage.style.display = "none";
@@ -96,7 +96,7 @@ window.addEventListener("hashchange", ()=>{
 
 
 export async function createPath(folder,pageName, element){
-  const response = await fetch(`/src/${folder}/${pageName}.html`)
+  const response = await fetch(`/${folder}/${pageName}.html`)
   const data = await response.text()
   element.innerHTML = data
 
