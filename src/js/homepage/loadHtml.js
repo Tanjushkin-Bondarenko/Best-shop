@@ -59,15 +59,15 @@ function setNavigation() {
   const pages = document.querySelectorAll("a[data-page]")
   const menu = document.querySelector("#header-menu")
   if(!menu.querySelector(".active-menu"))menu.querySelector("#home-page").classList.add("active-menu")
-  pages.forEach(item =>{item.addEventListener("click", (e) => {
-    pages.forEach(p=>p.classList.remove("active-menu"))
+  for(let item of pages){item.addEventListener("click", (e) => {
+    for(let p of pages)p.classList.remove("active-menu")
     e.target.classList.add("active-menu")
     if (e.target.matches("a[data-page]")) e.preventDefault();
-    let page = e.target.getAttribute("data-page");
-    window.location.hash = page;
+     let page = e.target.dataset.page;
+    globalThis.location.hash = page;
     loadPage(page)
   })
-  })
+  }
 }
 
 
@@ -76,48 +76,42 @@ function router() {
   const hash = location.hash.replace("#", "");
   const hashPage = hash || "home";
   if(document.querySelectorAll("#header-menu > a")){
-    document.querySelectorAll("#header-menu > a").forEach(item=>{
+     let menuItem = document.querySelectorAll("#header-menu > a")
+    for(let item of menuItem){{
       item.classList.remove("active-menu");
-      if(item.dataset.page == hashPage)item.classList.add("active-menu")
-      
-    })    }
+      if(item.dataset.page == hashPage)item.classList.add("active-menu") 
+    }}
   loadPage(hashPage);
 }
 
  
 window.addEventListener("hashchange", ()=>{
   router();
-  window.scrollTo(0, 0);
+  globalThis.scrollTo(0, 0);
 }
 );
-// window.addEventListener("DOMContentLoaded", ()=>router());
-
   
-
-
 export async function createPath(folder,pageName, element){
   const response = await fetch(`/src/${folder}/${pageName}.html`)
   const data = await response.text()
   element.innerHTML = data
-
 }
 
 function logohendler(elment1,element2 ){
-      
   elment1.style.display = "none";
   element2.style.display = "block";
-  showActivePage("home-page")
-      
+  showActivePage("home-page") 
 } 
 
 export function showActivePage(val){
-  document.querySelectorAll("#header-menu a").forEach(item=>item.classList.remove("active-menu"));
+   let menuItems = document.querySelectorAll("#header-menu a")
+  for(let item of menuItems)item.classList.remove("active-menu"));
   document.querySelector(`#${val}`).classList.add("active-menu")
 }
 
 function showLoginWindow(){
   const popup = document.querySelector("#popup");
-  popup.style.display == "none" ? popup.style.display = "block" : popup.style.display = "none";
+ popup.style.display == (popup.style.display = "none") ? "block" :  "none";
   document.querySelector("#togle-password").addEventListener("click", toglePassword)
 }
 
