@@ -39,7 +39,7 @@ export async function loadPage(page) {
   if(page === "home"){
     mainContent.style.display = "none";
     homePage.style.display = "block";
-    createCourosel("/src/assets/data.json")
+    createCourosel("src/assets/data.json")
   }else{
     mainContent.style.display = "block";
     homePage.style.display = "none";
