@@ -1,5 +1,4 @@
-import { buildCard } from "../catalog/buildCard.js";
-import { createButton } from "../catalog/buildCard.js";
+import { buildCard, createButton } from "../catalog/buildCard.js";
 import { addProductToCart} from "../cart/addProductToCart.js";
 import { viewProduct } from "./viewProduct.js";
 
@@ -27,9 +26,9 @@ export function showProductDetail(id){
 
  
       if(current.size.length == 1){
-        sizeOption.forEach(i => 
-        {i.value !== current.size ? i.disabled=true : i.disabled =false }
-        )
+        for(let item of sizeOption){
+         item.disabled = item.value !== current.size;
+        }
       }
       img.src=`/src/assets/img/${current.imageUrl}`
       img.dataset.info = current.imageUrl
@@ -65,15 +64,15 @@ export function showProductDetail(id){
     });  
 
 
-  prodDetailsBtns.forEach(btn=>{
+ for(let btn of prodDetailsBtns){
     btn.addEventListener("click", (e)=>{
       if(e.target.classList.value == "active-button")return
-      prodDetailsBtns.forEach(item=>item.classList.remove("active-button"));
-      prodDetailsInfo.forEach(item => item.style.display="none")
+      for(let item of prodDetailsBtns)item.classList.remove("active-button");
+      for(let item of prodDetailsInfo)item.style.display="none"
       e.target.classList.add("active-button")
       document.querySelector(`#${e.target.id}-block`).style.display = "flex"  
     })
-  })    
+  }    
 }
 
 export function createSvgIcon(val){
