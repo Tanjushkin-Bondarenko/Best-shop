@@ -14,7 +14,7 @@ jobs:
 
       # Якщо ваш проект використовує Node.js/npm для збірки (у вас є package.json)
       - name: Setup Node.js
-    uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
