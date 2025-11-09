@@ -94,7 +94,7 @@
         }
 
         #photo-block {
-            background-image: url("/src/assets/img/hp2.png");
+            background-image: url("/docs/assets/img/hp2.png");
             background-size: cover;
             color: var.$white;
             display: flex;
@@ -166,7 +166,7 @@
 
             @for $i from 1 to 5{
                 .cases#{$i} {
-                    background-image: url("/src/assets/img/hp-travel#{$i}.png");
+                    background-image: url("/docs/assets/img/hp-travel#{$i}.png");
                     width: 24%;
                     height: 600px;
                     display: flex;
@@ -282,7 +282,7 @@
         margin: 0 auto;
         height: 400px;
         display: flex;
-        background-image: url("/src/assets/img/offer.jpg");
+        background-image: url("/docs/assets/img/offer.jpg");
         background-size: cover;
         justify-content: space-around;
         align-items: center;

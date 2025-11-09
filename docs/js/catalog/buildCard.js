@@ -5,7 +5,7 @@ export function buildCard(item) {
   const photoSaleBlock = document.createElement("div");
   photoSaleBlock.className ="photo-sale-block"
   const photo = document.createElement("img")
-  photo.src = `/src/assets/img/${item.imageUrl}`
+  photo.src = `/docs/assets/img/${item.imageUrl}`
   photo.alt = item.name;
   photo.loading = "lazy"
   const nameTag = document.createElement("h6");

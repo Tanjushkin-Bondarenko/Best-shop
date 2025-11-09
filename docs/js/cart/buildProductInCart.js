@@ -10,7 +10,7 @@ export function buildProductInCart(productData){
 
   productContainer.classList.add("prouct-container");
   const productImg = document.createElement("img")
-  productImg.src = `/src/assets/img/${productData.img}`;
+  productImg.src = `/docs/assets/img/${productData.img}`;
   productImg.alt = productData.name;
   productImg.loading = "lazy"
   const productNameInfo = document.createElement("div")

@@ -4,7 +4,7 @@
      font-family: var.$primary-font;
 
     #info{
-        background-image: url("/src/assets/img/about-bg.jpg");
+        background-image: url("/docs/assets/img/about-bg.jpg");
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -135,7 +135,7 @@
  }  
 
  #offer-block{
-           background-image: url("/src/assets/img/offer.jpg");
+           background-image: url("/docs/assets/img/offer.jpg");
            width: 80%;
            display: grid;
            grid-template-columns: repeat(2, 1fr);
