@@ -2,25 +2,19 @@ import { createCourosel, caruselMove, move} from "./homepage/createCarousel.js"
 import { loadHTML, loadPage, showActivePage } from "./homepage/loadHtml.js";
 
 
-<<<<<<< HEAD:src/js/main.js
+
 loadHTML('#header', "/src/components/header.html");
 loadHTML("#footer", "/src/components/footer.html");
-=======
-loadHTML('#header', "/docs/components/header.html");
-loadHTML("#footer", "../../components/footer.html");
->>>>>>> 9db023e7e3eb7c269d8afd2e18e263050a50ec30:docs/js/main.js
-
 
 document.querySelector("#view-all").addEventListener("click", ()=>{
   loadPage("catalog");
   showActivePage("catalog")
 });
 
-<<<<<<< HEAD:src/js/main.js
+
 createCourosel("/src/assets/data.json");
-=======
-createCourosel("../assets/data.json");
->>>>>>> 9db023e7e3eb7c269d8afd2e18e263050a50ec30:docs/js/main.js
+
+
 
 const newTrack = document.querySelector("#new-track");
 const selectedTrack = document.querySelector("#selected-track");
